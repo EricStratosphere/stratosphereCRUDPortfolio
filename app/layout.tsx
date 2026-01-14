@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-
+import { Italiana } from 'next/font/google';
 import "./globals.css";
 
 
+const italianaFont = Italiana({
+  subsets : ["latin"],
+  weight : "400"
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
