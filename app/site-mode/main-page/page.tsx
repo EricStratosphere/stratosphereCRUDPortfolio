@@ -1,12 +1,19 @@
-import Header from "./components/header"
-export default function MainPage(){
+"use server";
+
+import ArtCollage from "./components/art-collage"
+import HeroSection from "./components/header"
+export default async function MainPage(){
     return(
         <>
-            <Header></Header>
+            <header>
+                <HeroSection></HeroSection>
+            </header>
             <main>
-
+                <ArtCollage></ArtCollage>
             </main>
-            
+            <footer>
+
+            </footer>
         </>
     )
 }
