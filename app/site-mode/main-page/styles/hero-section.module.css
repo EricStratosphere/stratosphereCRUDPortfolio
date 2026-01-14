@@ -1,18 +1,20 @@
+:root{
+    --outer-padding : 40px;
+    --text-margin : 20px 0 0 20px;
+}
 .hero-section{
     display : flex;
     flex-direction: row;
-    background-color: aqua;
-    padding : 40px;
+    /* background-color: aqua; */
+    padding : var(--outer-padding);
 }
 
 
 
 .artist-introduction{
-    margin : 0px;
+    margin : var(--text-margin);
     padding : 0px;
-
-    background-color: blue;
-    width : 60%;
+    /* background-color: blue; */
     text-align : left;
     font-family : Italiana;
     font-size : clamp(25px, 10vw, 60px);
@@ -25,18 +27,22 @@
     -webkit-text-stroke-width : 1px;
     -webkit-text-stroke-color : rgb(255, 121, 32);
 }
+
 .about-me{
-    margin : 0px;
-    background-color: blue;
-    margin-top: 20px;
+    margin : 20px 0 0 20px;
+    /* background-color: blue; */
 }
 
 .text-area{
     display : flex;
     flex-direction : column;
+    justify-content: space-evenly;
     align-items: start;
-    background-color: green;
+    /* background-color: green; */
     padding : 0px;    
+    margin : 0px;
+    width : 65%;
+    font-size : 1.5em;
 }
 
 
@@ -49,17 +55,35 @@
     width : 80%;
 }
 
+
+.outer-image-container{
+    width : 30vw;
+    min-width : 450px;
+    max-width : 750px;
+    height: 30vw;
+    max-height : 750px;
+    min-height : 450px;
+    background-color: rgb(152, 163, 186);
+    display : flex;
+    border-radius : 100%;
+    justify-content: center;
+    align-items: center;
+    box-shadow : 0px 0px 25px 15px rgb(16, 29, 54);
+}
 .hero-image-container{
     background-color: blue;
     position : relative;
-    flex-basis : clamp(75px, 20vw, 500px);
-    height : clamp(75px, 20vw, 500px);
+    width : 80%;
+    height : 80%;
+    border-radius : 100%;
     overflow : hidden;
+    box-shadow : 0px 0px 25px 15px rgb(29, 36, 49);
 }
 
 .image{
     position : absolute;
-    top : -50px;
-    right : -50px;
+    height : 100%;
+    width : 100%;
+    right : 2px;
 }
 

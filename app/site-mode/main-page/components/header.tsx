@@ -10,7 +10,7 @@ export default async function HeroSection(){
             <div className={styles['text-area']}>
                 <span className={styles['artist-introduction']}>
                     
-                    Hi! My name is <span className={styles['name']}>Eric Stratosphere!</span> Nice to meet you.
+                    Hi! My name is <span className={styles['name']}>Eric Stratosphere!</span> <br/> Nice to meet you.
                     
                 </span>
                 <div className={styles['about-me']}>
@@ -18,8 +18,10 @@ export default async function HeroSection(){
                 </div>
             </div>
 
-            <div className={styles['hero-image-container']}>
-                <Image className={styles['image']}src="/EricStratosphere-mockpic.webp" alt="image" width={0} height={0} sizes="100vw" style={{ width : '120%', height : 'auto'}}></Image>
+            <div className={styles['outer-image-container']}>
+                <div className={styles['hero-image-container']}>
+                    <Image className={styles['image']}src="/EricStratosphere-mockpic.webp" alt="image" width={0} height={0} sizes="100vw"></Image>
+                </div>
             </div>
         </header>
     </>

@@ -12,7 +12,7 @@ export default async function MainPage(){
                 <ArtCollage></ArtCollage>
             </main>
             <footer>
-
+                
             </footer>
         </>
     )
