@@ -2,11 +2,14 @@
     --outer-padding : 40px;
     --text-margin : 20px 0 0 20px;
 }
+
+
 .hero-section{
     display : flex;
     flex-direction: row;
     /* background-color: aqua; */
     padding : var(--outer-padding);
+    padding-bottom : 0px;
 }
 
 
@@ -20,17 +23,25 @@
     font-size : clamp(25px, 10vw, 60px);
     -webkit-text-stroke-width : 1px;
     -webkit-text-stroke-color : white;
+    
 }
 
 .name{
     color : rgb(255, 121, 32);
-    -webkit-text-stroke-width : 1px;
-    -webkit-text-stroke-color : rgb(255, 121, 32);
+    -webkit-text-stroke : 1px transparent;
+    /* -webkit-text-stroke-color : rgb(255, 121, 32); */
+    background-image : linear-gradient(to right, rgb(255, 121, 32) 75%, rgb(107, 206, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .about-me{
     margin : 20px 0 0 20px;
     /* background-color: blue; */
+
+    background-image : linear-gradient(to right, rgb(255, 255, 255) 75%, rgb(107, 206, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .text-area{
@@ -68,8 +79,9 @@
     border-radius : 100%;
     justify-content: center;
     align-items: center;
-    box-shadow : 0px 0px 25px 15px rgb(16, 29, 54);
+    box-shadow : 0px 0px 25px 15px rgb(7, 46, 118);
 }
+
 .hero-image-container{
     background-color: blue;
     position : relative;
@@ -82,8 +94,10 @@
 
 .image{
     position : absolute;
-    height : 100%;
-    width : 100%;
-    right : 2px;
+    width : 110%;
+    height : 110%;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
 }
 
