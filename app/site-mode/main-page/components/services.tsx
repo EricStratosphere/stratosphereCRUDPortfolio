@@ -1,5 +1,6 @@
 import styles from '../styles/services.module.css'
 import Image from 'next/image'
+
 export default function Services(){
     return(
         <>

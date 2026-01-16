@@ -2,6 +2,7 @@
 
 import styles from '../styles/art-collage.module.css'
 import Image from 'next/image';
+import ArtCard from './artCard'
 export default async function ArtCollage(){
     return(
         <>
@@ -10,22 +11,15 @@ export default async function ArtCollage(){
                     Works
                 </div>
                 <div className={styles['artworks']}>
-                    <button>
-                        <Image src="/Howl.png" alt="artwork" width={0} height={0} className={styles['artwork']}></Image>            
-                    </button>
-                    <button>
-                        <Image src="/Arcane.png" alt="artwork" width={0} height={0} className={styles['artwork']}></Image>            
-                    </button>
-                    <button>
-                        <Image src="/Atelier.png" alt="artwork" width={0} height={0} className={styles['artwork']}></Image>            
-                    </button>
-                    <button>
-                        <Image src="/Dreamnotfound.jpg" alt="artwork" width={0} height={0} className={styles['artwork']}></Image>            
-                    </button>
-                    <button>
-                        <Image src="/songOfAchilles.png" alt="artwork" width={0} height={0} className={styles['artwork']}></Image>            
-                    </button>
+                    <ArtCard imgUrl="/Howl.png" artworkName='Howl'></ArtCard>
 
+                    <ArtCard imgUrl="/Arcane.png" artworkName='Arcane'></ArtCard>
+
+                    <ArtCard imgUrl="/Atelier.png" artworkName='The Lonely Atelier'></ArtCard>
+
+                    <ArtCard imgUrl='/Dreamnotfound.jpg' artworkName="Error 404: Dream Not Found"></ArtCard>
+                    
+                    <ArtCard imgUrl='/songOfAchilles.png' artworkName='Achilles smiled as his face strikes the Earth'></ArtCard>
                 </div>
             </div>
         </>
