@@ -26,10 +26,9 @@
 
     /* -webkit-column-count : 5;  */
     -webkit-column-gap : 5px; 
-    -webkit-column-width : 10vw;
-    -moz-column-count : 5;
+    -webkit-column-width :  clamp(180px, 25vw, 400px);
     -moz-column-gap : 5px;
-    -moz-column-width : 2vw;
+    -moz-column-width : clamp(180px, 25vw, 400px);
     /* column-count : 5; */
     
     column-width : clamp(180px, 25vw, 400px);
