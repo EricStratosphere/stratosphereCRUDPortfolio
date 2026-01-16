@@ -2,6 +2,7 @@
 import { useState } from "react";
 import styles from '../styles/art-collage.module.css'
 import Image from "next/image";
+import ArtworkOverlay from "@/app/general-components/artwork-overlay";
 interface ArtCardProps{
     imgUrl : string,
     artworkName : string,
@@ -19,10 +20,16 @@ export default function ArtCard({imgUrl, artworkName} : ArtCardProps){
     const handleMouseLeave = ()=>{
         setIsHovering(false);
     }
+    const handleClick = () => {
+        setArtworkClicked(true);
+    }
     return(
         <>
+            {artworkClicked && 
+                <ArtworkOverlay imgUrl={imgUrl}></ArtworkOverlay>
+            }
             <button className={styles['artwork-container']} onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}>
+            onMouseLeave={handleMouseLeave} onClick={handleClick}>
                 {isHovering && 
                     <div className={styles['onHover']}>
                         {artworkName}

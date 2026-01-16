@@ -1,0 +1,66 @@
+@keyframes fadeIn{
+    from {opacity : 0;}
+    to {opacity : 1;}
+}
+
+.overlay{
+    position : fixed;
+    width : 100vw;
+    height : 100vh;
+    top : 0;
+    left : 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    animation : fadeIn 0.2s ease-in;
+    display : flex;
+    z-index : 2;
+}
+
+@keyframes fadeToBottom{
+    from {
+        opacity : 0;
+        transform : translateY(-40px);
+    }
+    to{
+        transform : translateY(0);
+        opacity : 1;
+    }
+}
+.img-partition{
+    opacity : 0;
+    width : 50%;
+    height : 100vh;
+    /* background-color: rgba(17, 0, 255, 0.5); */
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    animation : fadeToBottom 1s forwards;
+    animation-delay : 0.5s;
+}
+
+.overlay-img{
+    width : 80%;
+    height : auto;
+}
+.txt-partition{
+    opacity : 0;
+    width : 50%;
+    height : 100vh;
+    /* background-color: rgba(255, 0, 0, 0.5); */
+    animation : fadeToBottom 1s forwards;
+    animation-delay : 0.5s;
+}
+
+
+.txt-partition h1{
+    font-family : monospace;
+    font-size : 3em;
+    margin-top : 40%;
+    padding : 0 40px 0 40px;
+}
+
+.txt-partition h3{
+    font-family : monospace;
+    font-size : 2em;
+    margin-top : 10%;
+    padding : 0 40px 0 40px;
+}
