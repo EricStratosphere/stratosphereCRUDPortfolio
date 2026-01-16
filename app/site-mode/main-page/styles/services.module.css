@@ -1,7 +1,4 @@
-:root{
-    --outer-padding : 40px;
-    --text-margin : 20px 0 0 20px;
-}
+@import url('./hero-section.module.css');
 
 .services-container{
     /* background-color: blue; */
@@ -18,7 +15,7 @@
     margin : var(--text-margin);
     text-align : left;
     font-family :'Courier New', Courier, monospace;
-    font-size : clamp(25px, 5vw, 40px);
+    font-size : clamp(20px, 2.5vw, 30px);
     -webkit-text-stroke-width : 1px;
     -webkit-text-stroke-color : white;
     letter-spacing: 4px;
@@ -44,8 +41,8 @@
 .service-button:hover{
     cursor:pointer;
     background-position: 0px;
-    
 }
+
 .services-box{
     margin-top : 40px;
     /* background-color : green; */

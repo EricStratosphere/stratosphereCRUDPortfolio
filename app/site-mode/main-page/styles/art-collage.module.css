@@ -1,0 +1,67 @@
+@import url('./hero-section.module.css');
+
+.art-collage{
+    padding : var(--outer-padding);
+    /* background-color: aqua; */
+}
+
+.collage-text{
+    width : 100%;
+    /* background-color: aqua; */
+    margin : 0 0 0 20px;
+    text-align : left;
+    font-family :'Courier New', Courier, monospace;
+    font-size : clamp(20px, 2.5vw, 30px);
+    -webkit-text-stroke-width : 1px;
+    -webkit-text-stroke-color : white;
+    letter-spacing: 4px;
+}
+
+.artworks{
+    
+    margin-top : 20px;
+    /* background-color: blue; */
+    width : 100%;
+    min-height : 100px;
+
+    /* -webkit-column-count : 5;  */
+    -webkit-column-gap : 5px; 
+    -webkit-column-width : 10vw;
+    -moz-column-count : 5;
+    -moz-column-gap : 5px;
+    -moz-column-width : 2vw;
+    /* column-count : 5; */
+    
+    column-width : clamp(200px, 25vw, 250px);
+    flex-shrink : 1;
+}
+
+
+.artwork{
+    width : 100%;
+    height : auto;
+}
+
+.artworks button{
+    margin-top : 20px;
+    width : 100%; 
+    height : auto;
+    border : none;
+    background-color : none;
+    background : none;
+    overflow : hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding : 0px;
+    border-radius : 20px;
+}
+
+.artwork{
+    outline : none;
+    border : none;
+    background-color: transparent;
+}
+.artworks button:hover{
+    cursor : pointer;
+    transform : translateY(-5px);
+    box-shadow : 0px 8px 20px 7px #000000;
+}

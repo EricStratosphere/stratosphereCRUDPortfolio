@@ -10,6 +10,7 @@
     /* background-color: aqua; */
     padding : var(--outer-padding);
     padding-bottom : 0px;
+
 }
 
 
@@ -20,7 +21,7 @@
     /* background-color: blue; */
     text-align : left;
     font-family : Italiana;
-    font-size : clamp(25px, 10vw, 60px);
+    font-size : clamp(10px, 5vw, 60px);
     -webkit-text-stroke-width : 1px;
     -webkit-text-stroke-color : white;
     
@@ -53,7 +54,7 @@
     padding : 0px;    
     margin : 0px;
     width : 65%;
-    font-size : 1.5em;
+    font-size : clamp(20px, 2vw, 25px);
 }
 
 
@@ -68,12 +69,13 @@
 
 
 .outer-image-container{
+
     width : 30vw;
-    min-width : 450px;
+    min-width : 350px;
     max-width : 750px;
     height: 30vw;
     max-height : 750px;
-    min-height : 450px;
+    min-height : 350px;
     background-color: rgb(152, 163, 186);
     display : flex;
     border-radius : 100%;
