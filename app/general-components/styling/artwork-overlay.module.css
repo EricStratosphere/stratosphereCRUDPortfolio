@@ -9,7 +9,7 @@
     height : 100vh;
     top : 0;
     left : 0;
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgb(0, 0, 0, 0.8);
     animation : fadeIn 0.2s ease-in;
     display : flex;
     z-index : 2;
@@ -34,12 +34,13 @@
     justify-content: center;
     align-items: center;
     animation : fadeToBottom 1s forwards;
-    animation-delay : 0.5s;
+    animation-delay : 0.75s;
 }
 
 .overlay-img{
     width : 80%;
     height : auto;
+    border : 10px solid rgb(255, 255, 255);
 }
 .txt-partition{
     opacity : 0;
@@ -47,7 +48,7 @@
     height : 100vh;
     /* background-color: rgba(255, 0, 0, 0.5); */
     animation : fadeToBottom 1s forwards;
-    animation-delay : 0.5s;
+    animation-delay : 0.75s;
 }
 
 

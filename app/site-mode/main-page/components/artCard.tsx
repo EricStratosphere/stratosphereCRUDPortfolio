@@ -26,7 +26,7 @@ export default function ArtCard({imgUrl, artworkName} : ArtCardProps){
     return(
         <>
             {artworkClicked && 
-                <ArtworkOverlay imgUrl={imgUrl}></ArtworkOverlay>
+                <ArtworkOverlay imgUrl={imgUrl} artworkName={artworkName} artworkDescription={""} setOverlay={setArtworkClicked}></ArtworkOverlay>
             }
             <button className={styles['artwork-container']} onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave} onClick={handleClick}>
