@@ -38,8 +38,9 @@
 }
 
 .overlay-img{
-    width : 80%;
-    height : auto;
+    /* width : 80%; */
+    /* width : auto; */
+    /* height : 70%; */
     border : 10px solid rgb(255, 255, 255);
 }
 .txt-partition{

@@ -1,3 +1,4 @@
+// "use client";
 import styles from './styling/artwork-overlay.module.css'
 import Image from 'next/image'
 interface OverlayProps{
@@ -6,12 +7,46 @@ interface OverlayProps{
     artworkDescription : string,
     setOverlay : (value : boolean)=>void,
 }
+
+interface imageStyling{
+    width : string,
+    height : string,
+}
+// import { useState, useEffect, CSSProperties} from 'react';
+
 export default function ArtworkOverlay({imgUrl, artworkName, artworkDescription, setOverlay} : OverlayProps){
+    
+    // const [image, setImage] = useState<HTMLImageElement | null>(null);
+    console.log("Overlay!");
+        const image : HTMLImageElement = new window.Image();
+        image.src = imgUrl;
+        image.onload = () => {
+            console.log(image.height);
+        }
+    
+
+    // useEffect(()=>{
+    //     loadImage();
+    // }, [])
     return(
         <>
+            {image ? 
+            
             <div className={styles['overlay']} onClick={()=>{setOverlay(false)}}>
                     <div className={styles['img-partition']}>
-                        <Image src={imgUrl} alt='overlay-img' width={0} height={0} className={styles['overlay-img']}></Image>
+                        <Image src={imgUrl} alt='overlay-img' width={0} height={0} className={styles['overlay-img']}
+
+                        style={
+                            image.height > image.width ? 
+                            
+                            {width : "auto", height : "70%", marginLeft : "20px"}
+
+                            :
+
+                            {width : "80%", height : "auto"}
+
+                        }
+                        ></Image>
                     </div>
                     <div className={styles['txt-partition']}>
                         <h1>
@@ -23,6 +58,13 @@ export default function ArtworkOverlay({imgUrl, artworkName, artworkDescription,
                         </h3>
                     </div>
             </div>
+
+            :
+
+
+            null
+            
+            }
         </>
     )
 }
