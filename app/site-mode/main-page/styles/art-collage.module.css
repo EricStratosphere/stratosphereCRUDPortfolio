@@ -32,7 +32,7 @@
     -moz-column-width : 2vw;
     /* column-count : 5; */
     
-    column-width : clamp(200px, 25vw, 400px);
+    column-width : clamp(180px, 25vw, 400px);
     flex-shrink : 1;
 }
 
