@@ -54,15 +54,17 @@
 
 
 .txt-partition h1{
-    font-family : monospace;
+    font-family : Italiana;
     font-size : 3em;
     margin-top : 40%;
     padding : 0 40px 0 40px;
+    -webkit-text-stroke-width : 0.75px;
 }
 
 .txt-partition h3{
-    font-family : monospace;
+    font-family : Italiana;
     font-size : 2em;
     margin-top : 10%;
     padding : 0 40px 0 40px;
+    -webkit-text-stroke-width : 0.25px;
 }

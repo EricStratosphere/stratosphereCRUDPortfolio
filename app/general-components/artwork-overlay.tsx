@@ -39,7 +39,7 @@ export default function ArtworkOverlay({imgUrl, artworkName, artworkDescription,
                         style={
                             image.height > image.width ? 
                             
-                            {width : "auto", height : "70%", marginLeft : "20px"}
+                            {width : "auto", minHeight : "250px", height : "60vw", maxHeight : "800px", marginLeft : "20px"}
 
                             :
 
