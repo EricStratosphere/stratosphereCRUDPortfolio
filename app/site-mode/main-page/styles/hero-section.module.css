@@ -27,6 +27,13 @@
     
 }
 
+
+.contact-me{
+    margin : var(--text-margin);
+    background-color: blue;
+    width : 100%;
+}
+
 .name{
     color : rgb(255, 121, 32);
     -webkit-text-stroke : 1px transparent;
@@ -102,4 +109,3 @@
     left : 50%;
     transform : translate(-50%, -50%);
 }
-
