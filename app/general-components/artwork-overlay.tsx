@@ -52,10 +52,21 @@ export default function ArtworkOverlay({imgUrl, artworkName, artworkDescription,
                         <h1>
                             {artworkName}
                         </h1>
+                                
+                        <p>
+                            Date | March 18, 2025
+                            <br/>
+                            Medium | Digital art on IbisPaintX
+                            <br/>
+                            Project Type | Personal Project
+                            <br/>
 
+                        </p>
                         <h3>
                             A fanart I created of my first and favorite Ghibli film. Howl's Moving Castle will always have a special place in my heart.
                         </h3>
+
+                        <p className={styles['instructions']}>Click anywhere to close.</p>
                     </div>
             </div>
 
