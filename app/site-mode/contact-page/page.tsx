@@ -34,7 +34,7 @@ export default function ContactPage(){
                         </textarea>
                     </div>
 
-                    <input type="submit" value="Submit"/>
+                    <input className={styles['submit']} type="submit" value="Submit"/>
                 </form>
             </div>
         </>

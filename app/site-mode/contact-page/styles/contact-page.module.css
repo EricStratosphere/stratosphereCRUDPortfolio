@@ -85,3 +85,15 @@
     background-color: rgb(14, 14, 19);
     border : 1px solid rgb(255, 255, 255);
 }
+
+.submit{
+    font-weight : bold;
+    font-size : 1.25em;
+    padding : 5px;
+    border-radius : 10px;
+    width : 30%;
+}
+
+.submit:hover{
+    cursor : pointer;
+}
