@@ -1,0 +1,87 @@
+@import url('../../main-page/styles/hero-section.module.css');
+
+.home{
+    /* background-color: blue; */
+    width : 100%;
+    color : white;
+    font-family : monospace;
+    font-size : 1.5em;
+}
+.form-div{
+    padding : var(--outer-padding);
+    /* background-color : blue; */
+    display : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-div h2{
+    /* background-color: aqua; */
+    font-family : Poppins; 
+    font-weight : bold;
+    font-size : 50px;
+    width : 100%;
+    padding : 0px;
+    margin-top : 0px;
+}
+
+.form-div p{
+    font-family : monospace;
+    font-size : 1.5em;
+    width : 100%;
+    margin : 0px;
+    padding : 0px;
+}
+
+
+.form-div form{
+    width : 80%;
+    max-width : 1000px;
+    display : flex;
+    flex-direction : column;
+    gap : 40px;
+    margin-top : 40px;
+}
+
+.input-area{
+    display : flex;
+    flex-direction : column;
+    /* background: black; */
+    
+}
+.name-area{
+    /* background-color: blue; */
+    display : flex;
+    flex-direction : row;
+    /* background-color: aqua; */
+    gap : 20px;
+}
+
+.name-area .input-area{
+    flex-basis: 50%;
+}
+
+.input-area label{
+    font-family : monospace;
+    font-size : clamp(15px, 5vw, 20px);
+    margin-bottom : 5px;
+    color : grey;
+}
+.input-area input{
+    padding : 10px;
+    color : white;
+    font-size : 1.25em;
+    background: transparent;
+    border : transparent;
+    border-bottom : 2px solid grey;
+}
+
+.form-div textarea{
+    min-height : 150px;
+    color : white;
+    font-size : 1.25em;
+    padding : 20px;
+    background-color: rgb(14, 14, 19);
+    border : 1px solid rgb(255, 255, 255);
+}

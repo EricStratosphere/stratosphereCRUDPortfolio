@@ -10,7 +10,7 @@ const italianaFont = Italiana({
 
 const poppinsFont = Poppins({
   subsets : ["latin"],
-  weight : "400",
+  weight : "800",
 })
 
 export const metadata: Metadata = {
