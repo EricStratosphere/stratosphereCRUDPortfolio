@@ -6,12 +6,23 @@
 }
 
 
+@keyframes fadeIn{
+    from {opacity : 0;
+        transform : translateY(-40px);
+    }
+    to{
+        opacity : 1;
+        transform : translateY(0);
+    }
+} 
 .hero-section{
+    opacity : 0;
     display : flex;
     flex-direction: row;
     /* background-color: aqua; */
     padding : var(--outer-padding);
     padding-bottom : 0px;
+    animation : fadeIn 1s ease-in-out forwards 0.5s;
 }
 
 

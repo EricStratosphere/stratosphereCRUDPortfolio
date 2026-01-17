@@ -1,12 +1,25 @@
 @import url('./hero-section.module.css');
 
+
+@keyframes fadeIn{
+    from {opacity : 0;
+        transform : translateY(-40px);
+    }
+    to{
+        opacity : 1;
+        transform : translateY(0);
+    }
+} 
+
 .services-container{
+    opacity : 0;
     /* background-color: blue; */
     padding : var(--outer-padding);
     /* background-color: black; */
     display : flex;
     flex-direction : column;
     align-items: center;
+    animation : fadeIn 1s ease-in-out forwards 1s; 
 }
 
 .services-text{

@@ -1,8 +1,19 @@
 @import url('./hero-section.module.css');
 
+@keyframes fadeIn{
+    from {opacity : 0;
+        transform : translateY(-40px);
+    }
+    to{
+        opacity : 1;
+        transform : translateY(0);
+    }
+} 
 .art-collage{
+    opacity : 0;
     padding : var(--outer-padding);
     /* background-color: aqua; */
+    animation : fadeIn 0.5s ease-in-out 1.5s forwards;  
 }
 
 .collage-text{
