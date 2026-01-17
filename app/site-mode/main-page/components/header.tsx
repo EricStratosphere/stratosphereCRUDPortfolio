@@ -3,7 +3,7 @@
 import styles from '../styles/hero-section.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-
+import ContactButtons from './contact-buttons'
 export default async function HeroSection(){
     return(
     <>
@@ -17,12 +17,7 @@ export default async function HeroSection(){
                 <div className={styles['about-me']}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sed tempore temporibus aliquam a, id totam vero exercitationem modi cupiditate, obcaecati error minus dolorum labore possimus dolor ad similique quod!
                 </div>
-                <div className={styles['contact-me']}>
-                    <Link href="/site-mode/contact-page" className={styles['contact-link']}>Let's connect!</Link>
-
-
-                    <Link href="/site-mode/contact-page" className={styles['about-link']}>More about me</Link>  
-                </div>
+                <ContactButtons></ContactButtons>
             </div>
 
             <div className={styles['outer-image-container']}>
