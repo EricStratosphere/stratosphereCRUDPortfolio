@@ -1,5 +1,5 @@
 // "use client";
-import styles from './styling/artwork-overlay.module.css'
+import styles from './styles/artwork-overlay.module.css'
 import Image from 'next/image'
 interface OverlayProps{
     imgUrl : string,
@@ -21,7 +21,7 @@ export default function ArtworkOverlay({imgUrl, artworkName, artworkDescription,
         const image : HTMLImageElement = new window.Image();
         image.src = imgUrl;
         image.onload = () => {
-            console.log(image.height);
+            
         }
     
 
