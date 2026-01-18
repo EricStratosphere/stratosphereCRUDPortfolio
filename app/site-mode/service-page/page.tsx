@@ -19,7 +19,7 @@ export default async function ServicePage(){
 
                 <div className={styles['outer-image-container']}>
                     <div className={styles['hero-image-container']}>
-                        <Image className={styles['image']}src="/Vector(1).svg" alt="image" width={0} height={0} sizes="100vw"></Image>
+                        <Image className={styles['image']}src="/book.png" alt="image" width={0} height={0} sizes="100vw"></Image>
                     </div>
                 </div>
             </header>
