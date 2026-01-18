@@ -18,7 +18,7 @@ export default function ServiceButton({imgUrl, serviceTitle} : serviceButtonProp
         <>
             <div className={styles['service-item']}>
                 <button className={styles['service-button']} onClick={()=>{handleButtonClick(serviceTitle)}}>
-                    <Image className={styles['service-img']}src='/Vector(1).svg' alt='icon' width={0} height={0}></Image>
+                    <Image className={styles['service-img']}src='/book.png' alt='icon' width={0} height={0}></Image>
                 </button>
                 Book cover art
             </div>
