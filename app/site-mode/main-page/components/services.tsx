@@ -1,7 +1,11 @@
+// "use client";
 import styles from '../styles/services.module.css'
 import Image from 'next/image'
+import ServiceButton from './service-button'
 
 export default function Services(){
+    
+
     return(
         <>
             <div className={styles['services-container']}>
@@ -11,13 +15,8 @@ export default function Services(){
                 </div>
 
                 <div className={styles['services-box']}>
-                    <div className={styles['service-item']}>
-                        <button className={styles['service-button']}>
-                            <Image className={styles['service-img']}src='/Vector(1).svg' alt='icon' width={0} height={0}></Image>
-                        </button>
-                        Book cover art
-                    </div>
-
+                    
+                    <ServiceButton imgUrl="/Vector(1).svg" serviceTitle='Book Cover Art'></ServiceButton>
                     <div className={styles['service-item']}>
                         <button className={styles['service-button']}>
                             <Image className={styles['service-img']}src='/Vector.svg' alt='icon' width={0} height={0}></Image>
