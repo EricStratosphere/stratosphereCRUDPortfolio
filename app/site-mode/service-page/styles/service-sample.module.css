@@ -1,0 +1,19 @@
+@import url('../../main-page/styles/hero-section.module.css');
+.service-sample-div{
+    padding : var(--outer-padding);
+    /* background-color: blue; */
+    width : 100%;
+    height : 100px;
+}
+
+.service-text{
+    width : 100%;
+    /* background-color: aqua; */
+    margin : var(--text-margin);
+    text-align : left;
+    font-family :'Courier New', Courier, monospace;
+    font-size : clamp(20px, 2.5vw, 30px);
+    -webkit-text-stroke-width : 1px;
+    -webkit-text-stroke-color : white;
+    letter-spacing: 4px;
+}

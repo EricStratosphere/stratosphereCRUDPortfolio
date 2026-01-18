@@ -78,6 +78,7 @@
     /* -webkit-text-stroke-color : rgb(255, 121, 32); */
     background-image : linear-gradient(to right, rgb(255, 121, 32) 75%, rgb(107, 206, 255));
     -webkit-background-clip: text;
+    background-clip : text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -87,6 +88,7 @@
 
     background-image : linear-gradient(to right, rgb(255, 255, 255) 75%, rgb(107, 206, 255));
     -webkit-background-clip: text;
+    background-clip : text;
     -webkit-text-fill-color: transparent;
 }
 

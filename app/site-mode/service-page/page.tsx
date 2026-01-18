@@ -1,6 +1,7 @@
 "use server";
 import styles from './styles/service-page.module.css'
 import Image from 'next/image'
+import ServiceSample from './components/service-sample';
 export default async function ServicePage(){
     return(
         <>
@@ -22,6 +23,10 @@ export default async function ServicePage(){
                     </div>
                 </div>
             </header>
+
+            <main>
+                <ServiceSample></ServiceSample>
+            </main>
         </>
 
     )
