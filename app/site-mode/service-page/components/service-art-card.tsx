@@ -6,11 +6,11 @@ import Image from "next/image";
 interface ServiceProps{    
     imgUrl : string,
     artworkName : string,
+    setArtworkClicked : (imgUrl : string, artworkName : string) => void,
 }
 
-export default function ServiceArtCard({imgUrl, artworkName} : ServiceProps){
+export default function ServiceArtCard({imgUrl, artworkName, setArtworkClicked} : ServiceProps){
     const [isHovering, setIsHovering] = useState(false);
-    const [artworkClicked, setArtworkClicked] = useState(false);
     // console.log(imgUrl);
 
     const handleMouseEnter = ()=>{
@@ -21,13 +21,10 @@ export default function ServiceArtCard({imgUrl, artworkName} : ServiceProps){
         setIsHovering(false);
     }
     const handleClick = () => {
-        setArtworkClicked(true);
+        setArtworkClicked(imgUrl, artworkName);
     }
     return(
         <>
-            {artworkClicked && 
-                <ArtworkOverlay imgUrl={imgUrl} artworkName={artworkName} artworkDescription={""} setOverlay={setArtworkClicked}></ArtworkOverlay>
-            }
             <button className={styles['artwork-container']} onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave} onClick={handleClick}>
                 {isHovering && 

@@ -8,10 +8,7 @@ interface OverlayProps{
     setOverlay : (value : boolean)=>void,
 }
 
-interface imageStyling{
-    width : string,
-    height : string,
-}
+
 // import { useState, useEffect, CSSProperties} from 'react';
 
 export default function ArtworkOverlay({imgUrl, artworkName, artworkDescription, setOverlay} : OverlayProps){
@@ -63,7 +60,7 @@ export default function ArtworkOverlay({imgUrl, artworkName, artworkDescription,
 
                         </p>
                         <h3>
-                            A fanart I created of my first and favorite Ghibli film. Howl's Moving Castle will always have a special place in my heart.
+                            A fanart I created of my first and favorite Ghibli film. Howl&apos;s Moving Castle will always have a special place in my heart.
                         </h3>
 
                         <p className={styles['instructions']}>Click anywhere to close.</p>
