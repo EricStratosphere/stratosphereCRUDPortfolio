@@ -32,23 +32,26 @@ export default function ServiceSample(){
                         <ServiceArtCard imgUrl="/MimiRose1.png" artworkName="The Stolen Snowflakes" setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
                     
                         <ServiceArtCard imgUrl='/MimiRose2.png' artworkName="Merry Marriages" setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
+                        <ServiceArtCard imgUrl='/LePetitPrince.png' artworkName='Le Petit Prince' setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
+                        <ServiceArtCard imgUrl="/kid's book.png" artworkName="Spanish Word Search" setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
                     </div>
-
-                    <div  className={styles['group']}>
-                        <ServiceArtCard imgUrl="/Augustus.png" artworkName="Descendants of The Fallen" setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
-
-                        <ServiceArtCard imgUrl="/MimiRose1.png" artworkName="The Stolen Snowflakes" setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
-                    
-                        <ServiceArtCard imgUrl='/MimiRose2.png' artworkName="Merry Marriages" setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
-                    </div>
-
                     <div className={styles['group']}>
                         <ServiceArtCard imgUrl="/Augustus.png" artworkName="Descendants of The Fallen" setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
-
                         <ServiceArtCard imgUrl="/MimiRose1.png" artworkName="The Stolen Snowflakes" setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
                     
                         <ServiceArtCard imgUrl='/MimiRose2.png' artworkName="Merry Marriages" setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
+                        <ServiceArtCard imgUrl='/LePetitPrince.png' artworkName='Le Petit Prince' setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
+                        <ServiceArtCard imgUrl="/kid's book.png" artworkName="Spanish Word Search" setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
                     </div>
+                    <div className={styles['group']}>
+                        <ServiceArtCard imgUrl="/Augustus.png" artworkName="Descendants of The Fallen" setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
+                        <ServiceArtCard imgUrl="/MimiRose1.png" artworkName="The Stolen Snowflakes" setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
+                    
+                        <ServiceArtCard imgUrl='/MimiRose2.png' artworkName="Merry Marriages" setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
+                        <ServiceArtCard imgUrl='/LePetitPrince.png' artworkName='Le Petit Prince' setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
+                        <ServiceArtCard imgUrl="/kid's book.png" artworkName="Spanish Word Search" setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
+                    </div>
+
                 </div>
             </div>
         </> 
