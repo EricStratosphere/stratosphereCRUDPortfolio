@@ -25,9 +25,10 @@ export default function ServiceSample(){
                     Works
                 </div>
 
-                <div className={styles['service-works']}>
+            </div>
+             <div className={styles['service-works']}>
                     {/* Hello world! */}
-                    <div className={styles['group']}>
+                    <div className={styles['group']} style={{backgroundColor : "blue"}}>
                         <ServiceArtCard imgUrl="/Augustus.png" artworkName="Descendants of The Fallen" setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
                         <ServiceArtCard imgUrl="/MimiRose1.png" artworkName="The Stolen Snowflakes" setArtworkClicked={handleArtCardClicked}></ServiceArtCard>
                     
@@ -53,7 +54,6 @@ export default function ServiceSample(){
                     </div>
 
                 </div>
-            </div>
         </> 
     )
 }
