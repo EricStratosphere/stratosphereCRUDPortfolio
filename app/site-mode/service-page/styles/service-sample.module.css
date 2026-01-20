@@ -2,8 +2,6 @@
 .service-sample-div{
     opacity : 0;
     padding : 40px 40px 0px 40px;
-    /* background-color: blue; */
-    /* width : 100%; */
     height : auto;
     overflow : visible;
     display : flex;
@@ -53,26 +51,26 @@
 
 .service-works{
     /* background-color : blue; */
-    padding : 20px 0 20px 0;
+
     opacity : 0;
     /* gap : 20px; */
-    /* background-color: blue;     */
     position : relative;
     width : 100%;
-    /* min-height : 300px; */
-    height : 40vw;
-    max-height : 500px;
-    padding : 0px;
+    min-height : 300px;
+    height : 25vw;
+    max-height : 550px;
     display : flex;
     flex-direction : row;
+    overflow-x : visible;
     overflow-y :visible;
-    overflow-x : hidden;
     justify-content: center;
     align-items: center;
     animation : toBottom 1s ease-in-out forwards 1s;
     flex : 1 1 auto;
     mask-image: linear-gradient(to right, transparent, 10%, white, 90%, transparent);
     margin-bottom : 35px;
+    padding-top : 25px;
+    padding-bottom : 25px;
 }
 
 .service-works::-webkit-scrollbar{
@@ -98,24 +96,11 @@
     justify-content: center;
     position : relative;
     animation : spin 20s infinite linear;
+    overflow-y : visible;
 }
 
 .group:hover{
     padding-left : 20px;
-}
-
-.special-group{
-    padding-right : 20px;
-    /* background-color: blue; */
-     width : auto;
-    height : 100%;
-    display : flex;
-    flex-direction : row;
-    gap : 20px;
-    align-items: center;
-    justify-content: center;
-    position : relative;
-    animation : spin 20s infinite linear;
 }
 
 .artwork-container{
