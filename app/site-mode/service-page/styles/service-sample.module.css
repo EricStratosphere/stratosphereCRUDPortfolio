@@ -10,6 +10,7 @@
     /* background-color: blue; */
     align-items : center;
     animation : toBottom 1s ease-in-out forwards 1s;
+
 }
 
 .service-text{
@@ -31,6 +32,7 @@
 .triangle{
     margin-bottom : 10px;
     transition : transform 0.45s ease-in-out;
+    margin-left: 10px;
 }
 
 @keyframes fadeIn{
@@ -50,6 +52,8 @@
 }
 
 .service-works{
+    /* background-color : blue; */
+    padding : 20px 0 20px 0;
     opacity : 0;
     /* gap : 20px; */
     /* background-color: blue;     */
@@ -62,9 +66,9 @@
     margin : 0px;
     display : flex;
     flex-direction : row;
-    overflow-y : hidden;
+    overflow-y :visible;
     overflow-x : hidden;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     animation : toBottom 1s ease-in-out forwards 1s;
     flex : 1 1 auto;
@@ -75,6 +79,8 @@
 .service-works::-webkit-scrollbar{
     display : none;
 }
+
+
 
 @keyframes spin{
     from { translate : 0;}
@@ -138,8 +144,6 @@
     height : 100%;
     width : auto;
 }
-
-
 
 .onHover{
     opacity : 0;

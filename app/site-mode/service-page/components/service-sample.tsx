@@ -17,6 +17,15 @@ const serviceWorks : {imgUrl : string, artworkName : string}[] =
     {imgUrl : "/kid's Book.png", artworkName : "Spanish Word Search"}
 ]
 
+const artworks : {imgUrl : string, artworkName : string}[] = 
+[
+    {imgUrl : '/Howl.png', artworkName : 'Howl'},
+    {imgUrl : '/Arcane.png', artworkName : 'Arcane'},
+    {imgUrl : '/Atelier.png', artworkName : 'The Lonely Atleier'},
+    {imgUrl : '/Dreamnotfound.jpg', artworkName : 'Error 404: Dream Not Found'},
+    {imgUrl : '/songOfAchilles.png', artworkName : 'Achilles smiled as his face strikes the Earth'},   
+]
+
 export default function ServiceSample(){
 
     const [carousel, setCarousel] = useState(true);
