@@ -4,6 +4,7 @@ import ArtCollage from "./components/art-collage"
 import HeroSection from "./components/header"
 import Services from "./components/services";
 import styles from './styles/art-collage.module.css'
+import Socials from "@/app/general-components/socials";
 
 const artworks : {imgUrl : string, artworkName : string}[] = 
     [
@@ -28,7 +29,7 @@ export default async function MainPage(){
                 <ArtCollage artworks={artworks}></ArtCollage>
             </main>
             <footer>
-                
+                <Socials></Socials>
             </footer>
         </>
     )

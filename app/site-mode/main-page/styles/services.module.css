@@ -82,9 +82,14 @@
 /* for the text */
 
 .service-item{
-    font-family : Italiana;
+    font-family : monospace;
+    /* background-color: blue; */
     -webkit-text-stroke-color: white ;
     -webkit-text-stroke-width : 0.5px;
     font-size : 1.5em;
+    display : flex;
+    flex-direction : column;
+    align-items: center;
+    gap : 20px;
 }
 

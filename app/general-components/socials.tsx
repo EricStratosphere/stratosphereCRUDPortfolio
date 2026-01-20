@@ -4,9 +4,22 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default async function Socials(){
-    const socials : {iconUrl : string, href : string}[] = [
-        {iconUrl : "", href : ""},
-        
+    const socials : {iconUrl : string, href : string, socialTitle : string}[] = [
+        {
+            iconUrl : "/artfol-icon.png", 
+            href : "https://artfol.app/@Eric_Stratosphere",
+            socialTitle : "Artfol",
+        },
+        {
+            iconUrl :"/instagram.svg",
+            href: "",
+            socialTitle : "Instagram",
+        },
+        {
+            iconUrl : "/upwork.png",
+            href : "https://www.upwork.com/freelancers/~016d80d833a67e919a",
+            socialTitle : "Upwork",
+        },
     ] 
     return(
         <>
@@ -15,11 +28,14 @@ export default async function Socials(){
                     Socials
                 </div>
                 <div className={styles['socials']}>
-                    {socials.map((value, index) => 
-                    <Link key={index}className={styles['social-link']} href={value.href}>
-                        <Image height={0} width={0} className={styles['social-icon']} src={value.iconUrl} alt="Social Icon"/>
-                    </Link>
-                    )
+                    {socials.map
+                        (
+                            (value, index) => 
+                                <Link key={index} className={styles['social-link']} href={value.href}>
+                                    <Image height={0} width={0} className={styles['social-icon']} src={value.iconUrl} alt="Social Icon"/>
+                                    {value.socialTitle}
+                                </Link>
+                        )
                     }
                 </div>
             </div>
