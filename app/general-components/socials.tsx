@@ -12,7 +12,7 @@ export default async function Socials(){
         },
         {
             iconUrl :"/instagram.svg",
-            href: "",
+            href: "https://www.instagram.com/theboyinthestratosphere/",
             socialTitle : "Instagram",
         },
         {
