@@ -68,6 +68,8 @@
     align-items: center;
     animation : toBottom 1s ease-in-out forwards 1s;
     flex : 1 1 auto;
+    mask-image: linear-gradient(to right, transparent, 10%, white, 90%, transparent);
+
 }
 
 .service-works::-webkit-scrollbar{
