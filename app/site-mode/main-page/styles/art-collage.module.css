@@ -33,9 +33,9 @@
     margin-top : 20px;
     width : 100%;
     min-height : 100px;
-    -webkit-column-width :  clamp(180px, 25vw, 400px);
-    -moz-column-width : clamp(180px, 25vw, 400px);
-    column-width : clamp(180px, 25vw, 400px);
+    -webkit-column-width :  clamp(180px, 25vw, 325px);
+    -moz-column-width : clamp(180px, 25vw, 325px);
+    column-width : clamp(180px, 25vw, 325px);
     flex-shrink : 1;
 }
 

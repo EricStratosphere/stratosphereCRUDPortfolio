@@ -2,6 +2,7 @@
 import styles from './styles/service-page.module.css'
 import Image from 'next/image'
 import ServiceSample from './components/service-sample';
+import Socials from '@/app/general-components/socials';
 export default async function ServicePage(){
     return(
         <>
@@ -27,6 +28,9 @@ export default async function ServicePage(){
             <main>
                 <ServiceSample></ServiceSample>
             </main>
+            <footer>
+                <Socials></Socials>
+            </footer>
         </>
 
     )
