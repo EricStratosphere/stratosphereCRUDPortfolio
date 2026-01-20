@@ -2,6 +2,7 @@
 import styles from './styles/service-page.module.css'
 import Image from 'next/image'
 import ServiceSample from './components/service-sample';
+import Socials from '@/app/general-components/socials';
 export default async function ServicePage(){
     return(
         <>
@@ -12,8 +13,11 @@ export default async function ServicePage(){
                        Book Cover Design
                         
                     </span>
+                    <span className={styles['sub-services']}>
+                        Composition layout | Graphic Design | Font Design | Environmental design
+                    </span>
                     <div className={styles['service-description']}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sed tempore temporibus aliquam a, id totam vero exercitationem modi cupiditate, obcaecati error minus dolorum labore possimus dolor ad similique quod!
+                        From fantasy to non-fiction, if you are looking for a visual artist to design your books, I have the experience in composition and color theory to produce designs that provide easy navigation for the eyes and attract readers!
                     </div>
                 </div>
 
@@ -27,6 +31,9 @@ export default async function ServicePage(){
             <main>
                 <ServiceSample></ServiceSample>
             </main>
+            <footer>
+                <Socials></Socials>
+            </footer>
         </>
 
     )

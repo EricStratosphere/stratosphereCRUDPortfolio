@@ -19,7 +19,6 @@
     opacity : 0;
     display : flex;
     flex-direction: row;
-    /* background-color: aqua; */
     padding : var(--outer-padding);
     padding-bottom : 0px;
     animation : fadeIn 1s ease-in-out forwards 0.5s;
@@ -112,6 +111,7 @@
 .about-me{
     /* background-color: blue; */
     width : 80%;
+    font-family : monospace;
 }
 
 
@@ -151,8 +151,8 @@
 }
 
 @keyframes widen{
-    from {width : 0;}
-    to {width : 100%; }
+    from { width : 0; }
+    to { width : 100%; }
 }
 
 .underline{

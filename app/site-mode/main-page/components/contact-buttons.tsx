@@ -27,7 +27,7 @@ export default function ContactButtons(){
         <>
          <div className={styles['contact-me']}>
             <div className={styles['outer-contact-div']} onMouseEnter={handleMouseEnterConnect} onMouseLeave={handleMouseLeaveConnect}>
-                <Link href="/site-mode/contact-page" className={styles['contact-link']}>Let's connect!</Link>
+                <Link href="/site-mode/contact-page" className={styles['contact-link']}>Let&apos;s connect!</Link>
                 {connectHovering &&  <div className={styles['underline']}></div>}               
             </div>
 

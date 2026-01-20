@@ -6,11 +6,11 @@ import ArtworkOverlay from "@/app/general-components/artwork-overlay";
 interface ArtCardProps{
     imgUrl : string,
     artworkName : string,
+    handleArtCardClicked : (imgUrl : string, artworkName : string) => void,
 }
 
-export default function ArtCard({imgUrl, artworkName} : ArtCardProps){
+export default function ArtCard({imgUrl, artworkName, handleArtCardClicked} : ArtCardProps){
     const [isHovering, setIsHovering] = useState(false);
-    const [artworkClicked, setArtworkClicked] = useState(false);
     // console.log(imgUrl);
 
     const handleMouseEnter = ()=>{
@@ -20,16 +20,12 @@ export default function ArtCard({imgUrl, artworkName} : ArtCardProps){
     const handleMouseLeave = ()=>{
         setIsHovering(false);
     }
-    const handleClick = () => {
-        setArtworkClicked(true);
-    }
+    
     return(
         <>
-            {artworkClicked && 
-                <ArtworkOverlay imgUrl={imgUrl} artworkName={artworkName} artworkDescription={""} setOverlay={setArtworkClicked}></ArtworkOverlay>
-            }
+
             <button className={styles['artwork-container']} onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave} onClick={handleClick}>
+            onMouseLeave={handleMouseLeave} onClick={()=>{handleArtCardClicked(imgUrl, artworkName)}}>
                 {isHovering && 
                     <div className={styles['onHover']}>
                         {artworkName}

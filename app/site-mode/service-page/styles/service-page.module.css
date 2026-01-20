@@ -42,7 +42,13 @@
     font-size : var(--header-size);
     -webkit-text-stroke-width : 1px;
     -webkit-text-stroke-color : white;
-    
+}
+
+.sub-services{
+    margin : var(--text-margin);
+    color : rgb(167, 174, 178);
+    font-size : clamp(15px, 175vw, 20px);
+    font-family : monospace;
 }
 
 .service-description{
@@ -52,6 +58,7 @@
     /* background-image : linear-gradient(to right, rgb(255, 255, 255) 75%, rgb(107, 206, 255)); */
     -webkit-background-clip: text;
     background-clip : text;
+    font-family : monospace;
     /* -webkit-text-fill-color: transparent; */
 }
 
