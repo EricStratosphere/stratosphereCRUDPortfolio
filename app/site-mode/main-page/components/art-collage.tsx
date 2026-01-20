@@ -5,19 +5,15 @@ import Image from 'next/image';
 import ArtCard from './artCard'
 import { useState } from 'react';
 import ArtworkOverlay from '@/app/general-components/artwork-overlay';
-export default function ArtCollage(){
+
+interface ArtCollageProps{
+    artworks : {imgUrl : string, artworkName : string}[],
+}
+
+export default function ArtCollage({artworks} : ArtCollageProps){
     const [overlayMode, setOverlayMode] = useState(false);
     const [imgUrl, setImgUrl] = useState('');
     const [artworkName, setArtworkName] = useState('');
-
-    const artworks : {imgUrl : string, artworkName : string}[] = 
-    [
-        {imgUrl : '/Howl.png', artworkName : 'Howl'},
-        {imgUrl : '/Arcane.png', artworkName : 'Arcane'},
-        {imgUrl : '/Atelier.png', artworkName : 'The Lonely Atleier'},
-        {imgUrl : '/Dreamnotfound.jpg', artworkName : 'Error 404: Dream Not Found'}
-        
-    ]
 
     function handleArtCardClicked(imgUrl : string, artworkName : string){
         setImgUrl(imgUrl);

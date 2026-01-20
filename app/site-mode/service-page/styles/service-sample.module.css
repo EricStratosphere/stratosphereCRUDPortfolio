@@ -62,7 +62,7 @@
     margin : 0px;
     display : flex;
     flex-direction : row;
-    overflow-y : visible;
+    overflow-y : hidden;
     overflow-x : hidden;
     /* justify-content: center; */
     align-items: center;

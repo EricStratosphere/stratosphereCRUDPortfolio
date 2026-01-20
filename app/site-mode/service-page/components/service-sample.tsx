@@ -44,9 +44,9 @@ export default function ServiceSample(){
             </div>
             {
                 carousel ? 
-                <Carousel handleArtCardClicked={handleArtCardClicked}></Carousel>
+                <Carousel handleArtCardClicked={handleArtCardClicked} artworks={serviceWorks}></Carousel>
                 :
-                <ArtCollage></ArtCollage>
+                <ArtCollage artworks={serviceWorks}></ArtCollage>
             }
         </> 
     )
