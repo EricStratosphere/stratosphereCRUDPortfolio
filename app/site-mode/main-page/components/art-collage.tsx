@@ -1,15 +1,13 @@
-"use server"
+
 
 import styles from '../styles/art-collage.module.css'
 import Image from 'next/image';
 import ArtCard from './artCard'
-export default async function ArtCollage(){
+export default function ArtCollage(){
     return(
         <>
             <div className={styles['art-collage']}>
-                <div className={styles['collage-text']}>
-                    Works
-                </div>
+                
                 <div className={styles['artworks']}>
                     <ArtCard imgUrl="/Howl.png" artworkName='Howl'></ArtCard>
 

@@ -1,10 +1,15 @@
 @import url('../../main-page/styles/hero-section.module.css');
 .service-sample-div{
-    padding : var(--outer-padding);
+    opacity : 0;
+    padding : 40px 40px 0px 40px;
     /* background-color: blue; */
     /* width : 100%; */
     height : auto;
     overflow : visible;
+    display : flex;
+    /* background-color: blue; */
+    align-items : center;
+    animation : toBottom 1s ease-in-out forwards 1s;
 }
 
 .service-text{
@@ -17,9 +22,35 @@
     -webkit-text-stroke-color : white;
     letter-spacing: 4px;
     margin-bottom : 30px;
+    /* background-color: aqua; */
+}
+
+.service-text:hover{
+    cursor : pointer;
+}
+.triangle{
+    margin-bottom : 10px;
+    transition : transform 0.45s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from { opacity : 0; }
+    to { opacity : 1 ;}
+}
+
+@keyframes toBottom{
+    from { 
+        opacity : 0;
+        transform : translateY(-50px);
+    }
+    to{
+        opacity : 1;
+        transform : translateY(0);
+    }
 }
 
 .service-works{
+    opacity : 0;
     /* gap : 20px; */
     /* background-color: blue;     */
     position : relative;
@@ -33,15 +64,10 @@
     flex-direction : row;
     overflow-y : visible;
     overflow-x : hidden;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    mask-image : linear-gradient(
-        to bottom,
-        transparent,
-        black var(--mask-height),
-        black calc(70% - var(--mask-height)),
-        transparent
-    );
+    animation : toBottom 1s ease-in-out forwards 1s;
+    flex : 1 1 auto;
 }
 
 .service-works::-webkit-scrollbar{
@@ -54,13 +80,31 @@
 }
 
 .group {
+    padding-right : 20px;
     width : auto;
-    /* background-color: blue; */
+    /* background-color: aqua; */
     height : 100%;
     display : flex;
     flex-direction : row;
     gap : 20px;
+    align-items: center;
+    justify-content: center;
+    position : relative;
+    animation : spin 20s infinite linear;
+}
+
+.group:hover{
+    padding-left : 20px;
+}
+
+.special-group{
     padding-right : 20px;
+    /* background-color: blue; */
+     width : auto;
+    height : 100%;
+    display : flex;
+    flex-direction : row;
+    gap : 20px;
     align-items: center;
     justify-content: center;
     position : relative;
@@ -70,22 +114,22 @@
 .artwork-container{
     position : relative;
     height : 100%;
-    background-color: transparent;
+    width : auto;
     border : none;
     border-radius : 20px;
     overflow : hidden;
     padding: 0px;
     margin : 0px;
-    transition : height 0.25s;
+    transition : height 0.25s ease-in-out ;
     align-self: center;
     justify-self: center;
 }
 .artwork-container:hover{
     cursor : pointer;
-    /* animation : grow 0.5s ease-in-out forwards;' */
+    animation : grow 0.5s ease-in-out forwards;
     height : calc(100% + 50px);
     position : relative;
-    z-index : 2;
+    box-shadow : rgb(162, 255, 255);
 }
 
 .artwork{
@@ -94,10 +138,6 @@
 }
 
 
-@keyframes fadeIn{
-    from { opacity : 0; }
-    to { opacity : 1 ;}
-}
 
 .onHover{
     opacity : 0;

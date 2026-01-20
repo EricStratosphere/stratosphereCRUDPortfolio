@@ -151,8 +151,8 @@
 }
 
 @keyframes widen{
-    from {width : 0;}
-    to {width : 100%; }
+    from { width : 0; }
+    to { width : 100%; }
 }
 
 .underline{
