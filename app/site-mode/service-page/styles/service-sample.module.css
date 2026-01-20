@@ -61,8 +61,8 @@
     max-height : 550px;
     display : flex;
     flex-direction : row;
-    overflow-x : visible;
-    overflow-y :visible;
+    overflow-x : hidden;
+    overflow-y :hidden;
     justify-content: center;
     align-items: center;
     animation : toBottom 1s ease-in-out forwards 1s;
@@ -97,11 +97,10 @@
     position : relative;
     animation : spin 20s infinite linear;
     overflow-y : visible;
+    /* padding-left : 20px; */
+    margin-left : 20px;
 }
 
-.group:hover{
-    padding-left : 20px;
-}
 
 .artwork-container{
     position : relative;
