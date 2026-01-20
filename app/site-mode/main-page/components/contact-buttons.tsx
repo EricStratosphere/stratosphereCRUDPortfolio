@@ -33,7 +33,7 @@ export default function ContactButtons(){
 
             <div className={styles['outer-contact-div']} onMouseEnter={handleMouseEnterAbout}
             onMouseLeave={handleMouseLeaveAbout}>
-                <Link href="/site-mode/contact-page" className={styles['about-link']} >More about me</Link>
+                <Link href="/site-mode/about-page" className={styles['about-link']} >More about me</Link>
                 {aboutHovering && <div className={styles['underline']}></div>}  
             </div>
         </div>
