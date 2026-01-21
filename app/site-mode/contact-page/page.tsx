@@ -8,7 +8,7 @@ export default function ContactPage(){
                 <h2>Contact me!</h2>
 
                 <p>
-                    If the art I've showcased has piqued your interest, don't hesitate to reach out! You can contact me via my email: <br/><br /> <strong>stratospherestu@gmail.com</strong>
+                    If the art I&apos;ve showcased has piqued your interest, don&apos;t hesitate to reach out! You can contact me via my email: <br/><br /> <strong>stratospherestu@gmail.com</strong>
                 </p>
                 <form action="https://formspree.io/f/mqeeewoe" method="post">
                     <div className={styles['name-area']}>

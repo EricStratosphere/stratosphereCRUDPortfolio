@@ -77,8 +77,6 @@
     display : none;
 }
 
-
-
 @keyframes spin{
     from { translate : 0;}
     to { translate : -100%; }
@@ -101,7 +99,9 @@
     margin-left : 20px;
 }
 
-
+.group:hover{
+    /* animation-play-state : paused; */
+}
 .artwork-container{
     position : relative;
     height : 100%;
