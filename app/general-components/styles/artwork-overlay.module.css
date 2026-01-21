@@ -1,0 +1,119 @@
+@keyframes fadeIn{
+    from {opacity : 0;}
+    to {opacity : 1;}
+}
+
+.overlay{
+    position : fixed;
+    width : 100vw;
+    height : 100vh;
+    top : 0;
+    left : 0;
+    bottom : 0;
+    right : 0;
+    background-color: rgb(0, 0, 0, 0.8);
+    animation : fadeIn 0.2s ease-in;
+    display : flex;
+    z-index : 2;
+    backdrop-filter: blur(5px);
+}
+
+@keyframes fadeToBottom{
+    from {
+        opacity : 0;
+        transform : translateY(-40px);
+    }
+    to{
+        transform : translateY(0);
+        opacity : 1;
+    }
+}
+.img-partition{
+    opacity : 0;
+    width : 50%;
+    height : 100vh;
+    /* background-color: rgba(17, 0, 255, 0.5); */
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    animation : fadeToBottom 1s forwards;
+    animation-delay : 0.75s;
+}
+
+.overlay-img{
+    width : 80%;
+    width : auto;
+    height : 70%;
+    border : 10px solid rgb(255, 255, 255);
+}
+.txt-partition{
+    opacity : 0;
+    width : 50%;
+    height : 100vh;
+    /* background-color: rgba(255, 0, 0, 0.5); */
+    animation : fadeToBottom 1s forwards;
+    animation-delay : 0.75s;
+}
+
+
+.txt-partition p{
+    font-size : 1.5em;
+    padding : 0 40px 0 40px;
+}
+.txt-partition h1{
+    font-family : Italiana;
+    font-size : 3em;
+    margin-top : 40%;
+    padding : 0 40px 0 40px;
+    -webkit-text-stroke-width : 0.25px;
+}
+
+.txt-partition h3{
+    font-size : 2em;
+    margin-top : 10%;
+    padding : 0 40px 0 40px;
+    font-weight: 100;
+}
+
+.txt-partition p, .txt-partition h3{
+    font-family : monospace;
+}
+.instructions{
+    font-size : 2em !important;
+    color : grey;
+}
+
+@media screen and (max-width : 750px){
+    .overlay{
+        flex-direction : column;
+        /* background-color: blue; */
+        align-items: center;
+        overflow : auto;
+    }
+
+    .img-partition{
+        margin : 0;
+        padding : 0;
+        padding-top : 50px;
+        width : 100%;
+        height : auto;
+        /* background-color: blue; */
+        margin-bottom : 40px;
+    }
+    .txt-partition{
+        padding : 0;
+        width : 100%;
+        height : auto;
+        /* background-color: red; */
+        align-items: start;
+        justify-content: start;
+        margin : 0;
+    }
+    .txt-partition h1{
+        margin : 0;
+
+    }
+    .overlay-img{
+        width : auto;
+    }
+}

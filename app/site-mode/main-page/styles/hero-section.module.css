@@ -1,0 +1,222 @@
+:root{
+    --outer-padding : 40px;
+    --text-margin : 20px 0 0 20px;
+
+    --header-size : clamp(30px, 5vw, 60px);
+}
+
+
+@keyframes fadeIn{
+    from {opacity : 0;
+        transform : translateY(-40px);
+    }
+    to{
+        opacity : 1;
+        transform : translateY(0);
+    }
+} 
+.hero-section{
+    opacity : 0;
+    display : flex;
+    flex-direction: row;
+    padding : var(--outer-padding);
+    padding-bottom : 0px;
+    animation : fadeIn 1s ease-in-out forwards 0.5s;
+}
+
+
+
+
+
+.artist-introduction{
+    margin : var(--text-margin);
+    padding : 0px;
+    /* background-color: blue; */
+    text-align : left;
+    font-family : Italiana;
+    font-size : var(--header-size);
+
+    -webkit-text-stroke-width : 1px;
+    -webkit-text-stroke-color : white;
+    
+}
+
+
+.contact-me{
+    margin : var(--text-margin);
+    width : 100%;
+    display : flex;
+    gap : 10vw;
+}
+
+.underline{
+    width : 100%;
+    height : 3px;
+    background-color: white;
+}
+
+
+.about-link, .contact-link{
+    text-decoration : none;
+    font-family : Poppins;
+    font-weight : bold;
+    color : white;
+    padding : 8px 0px 0px 0px;
+}
+
+.about-link::after, .contact-link::after{
+    content:"▶";
+    margin-left : 15px;
+}
+.name{
+    color : rgb(255, 121, 32);
+    -webkit-text-stroke : 1px transparent;
+    /* -webkit-text-stroke-color : rgb(255, 121, 32); */
+    background-image : linear-gradient(to right, rgb(255, 121, 32) 75%, rgb(107, 206, 255));
+    -webkit-background-clip: text;
+    background-clip : text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-me{
+    margin : 20px 0 0 20px;
+    /* background-color: blue; */
+
+    background-image : linear-gradient(to right, rgb(255, 255, 255) 75%, rgb(107, 206, 255));
+    -webkit-background-clip: text;
+    background-clip : text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-area{
+    display : flex;
+    flex-direction : column;
+    justify-content: space-evenly;
+    align-items: start;
+    /* background-color: green; */
+    padding : 0px;    
+    margin : 0px;
+    width : 65%;
+    font-size : clamp(20px, 2vw, 25px);
+}
+
+
+.artist-name{
+    text-align : center;
+}
+
+.about-me{
+    /* background-color: blue; */
+    width : 80%;
+    font-family : monospace;
+}
+
+
+.outer-image-container{
+
+    width : 30vw;
+    min-width : 350px;
+    max-width : 750px;
+    height: 30vw;
+    max-height : 750px;
+    min-height : 350px;
+    background-color: rgb(152, 163, 186);
+    display : flex;
+    border-radius : 100%;
+    justify-content: center;
+    align-items: center;
+    box-shadow : 0px 0px 25px 15px rgb(7, 46, 118);
+}
+
+.hero-image-container{
+    /* background-color: blue; */
+    position : relative;
+    width : 80%;
+    height : 80%;
+    border-radius : 100%;
+    overflow : hidden;
+    box-shadow : 0px 0px 25px 15px rgb(29, 36, 49);
+}
+
+.image{
+    position : absolute;
+    width : 110%;
+    height : 110%;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+}
+
+@keyframes widen{
+    from { width : 0; }
+    to { width : 100%; }
+}
+
+.underline{
+    width : 0;
+    animation : widen 0.2s ease-in-out forwards;
+    
+}
+.outer-contact-div{
+    /* background-color: blue; */
+    display : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width : 750px){
+    .hero-section{
+        flex-direction : column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding : 0;
+    }
+
+    .text-area{
+        width : 85%;
+    }
+    .artist-introduction{
+        margin : 0;
+        padding : 0px;
+    }
+
+    .name{
+        background-image : linear-gradient(to top, rgb(255, 121, 32) 0%, rgb(107, 206, 255));
+    }
+    .about-me{
+        padding : 0;
+        margin : 0;
+        margin-top : 30px;
+        background-image : linear-gradient(to top, rgb(255, 255, 255) 40%, rgb(107, 206, 255));
+    }
+    .outer-image-container{
+        margin-top : 50px;
+        margin-bottom : 50px;
+    }
+}
+
+
+@media screen and (max-width : 600px){
+    @keyframes widen{
+        from { width : 0; }
+        to { width : 45%; }
+    }
+    .contact-me{
+        /* background-color: blue; */
+        margin : 0px;
+        margin-top : 40px;
+        flex-direction : column;
+        gap : 40px;
+
+    }
+    .contact-link{
+        /* background-color: aqua; */
+
+    }
+    .about-link{
+        /* background-color: antiquewhite; */
+
+    }
+}

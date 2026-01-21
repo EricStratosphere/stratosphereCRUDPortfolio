@@ -1,0 +1,112 @@
+@import url('../../main-page/styles/hero-section.module.css');
+
+
+@keyframes fadeIn{
+    from {opacity : 0;
+        transform : translateY(-40px);
+    }
+    to{
+        opacity : 1;
+        transform : translateY(0);
+    }
+} 
+.service-header{
+    opacity : 0;
+    display : flex;
+    flex-direction: row;
+    /* background-color: aqua; */
+    padding : var(--outer-padding);
+    padding-bottom : 0px;
+    animation : fadeIn 1s ease-in-out forwards 0.5s;
+    gap : clamp(20px, 5vw, 100px);
+}
+
+.text-area{
+    display : flex;
+    flex-direction : column;
+    justify-content: space-evenly;
+    align-items: start;
+    /* background-color: green; */
+    padding : 0px;    
+    margin : 0px;
+    width : 65%;
+    font-size : clamp(20px, 2vw, 25px);
+}
+
+.service-title{
+    margin : var(--text-margin);
+    padding : 0px;
+    /* background-color: blue; */
+    text-align : left;
+    font-family : Italiana;
+    font-size : var(--header-size);
+    -webkit-text-stroke-width : 1px;
+    -webkit-text-stroke-color : white;
+}
+
+.sub-services{
+    margin : var(--text-margin);
+    color : rgb(167, 174, 178);
+    font-size : clamp(15px, 175vw, 20px);
+    font-family : monospace;
+}
+
+.service-description{
+    margin : 20px 0 0 20px;
+    /* background-color: blue; */
+    color : white;
+    /* background-image : linear-gradient(to right, rgb(255, 255, 255) 75%, rgb(107, 206, 255)); */
+    -webkit-background-clip: text;
+    background-clip : text;
+    font-family : monospace;
+    /* -webkit-text-fill-color: transparent; */
+}
+
+.outer-image-container{
+
+    width : 30vw;
+    min-width : 350px;
+    max-width : 400px;
+    max-height : 400px;
+    min-height : 350px;
+    display : flex;
+    /* border-radius : 100%; */
+    justify-content: center;
+    align-items: center;
+    /* box-shadow : 0px 0px 25px 15px rgb(7, 46, 118); */
+    
+}
+.hero-image-container{
+    position : relative;
+    width : 100%;
+    height : 100%;
+}
+.image{
+    position : absolute;
+    width : 100%;
+    height : 100%;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    filter : drop-shadow(0 0 15px rgb(7, 46, 118));
+}
+@media screen and (max-width : 750px){
+    .service-header{
+        flex-direction : column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding : 0;
+    }
+    .text-area{
+        width : 85%;
+    }
+    .image{
+        min-width : 350px;
+        max-width : 400px;
+        max-height : 400px;
+        min-height : 350px;    
+    }
+    .outer-image-container{
+        margin-top : 20px;
+    }
+}

@@ -1,0 +1,144 @@
+@import url('../../main-page/styles/hero-section.module.css');
+.service-sample-div{
+    opacity : 0;
+    padding : 40px 40px 0px 40px;
+    height : auto;
+    overflow : visible;
+    display : flex;
+    /* background-color: blue; */
+    align-items : center;
+    animation : toBottom 1s ease-in-out forwards 1s;
+
+}
+
+.service-text{
+    /* background-color: aqua; */
+    margin : var(--text-margin);
+    text-align : left;
+    font-family :'Courier New', Courier, monospace;
+    font-size : clamp(20px, 2.5vw, 30px);
+    -webkit-text-stroke-width : 1px;
+    -webkit-text-stroke-color : white;
+    letter-spacing: 4px;
+    margin-bottom : 30px;
+    /* background-color: aqua; */
+}
+
+.service-text:hover{
+    cursor : pointer;
+}
+.triangle{
+    margin-bottom : 10px;
+    transition : transform 0.45s ease-in-out;
+    margin-left: 10px;
+}
+
+@keyframes fadeIn{
+    from { opacity : 0; }
+    to { opacity : 1 ;}
+}
+
+@keyframes toBottom{
+    from { 
+        opacity : 0;
+        transform : translateY(-50px);
+    }
+    to{
+        opacity : 1;
+        transform : translateY(0);
+    }
+}
+
+.service-works{
+    /* background-color : blue; */
+
+    opacity : 0;
+    /* gap : 20px; */
+    position : relative;
+    width : 100%;
+    min-height : 350px;
+    height : 25vw;
+    max-height : 550px;
+    display : flex;
+    flex-direction : row;
+    overflow-x : hidden;
+    overflow-y :hidden;
+    justify-content: center;
+    align-items: center;
+    animation : toBottom 1s ease-in-out forwards 1s;
+    flex : 1 1 auto;
+    mask-image: linear-gradient(to right, transparent, 10%, white, 90%, transparent);
+    margin-bottom : 35px;
+    padding-top : 25px;
+    padding-bottom : 25px;
+}
+
+.service-works::-webkit-scrollbar{
+    display : none;
+}
+
+@keyframes spin{
+    from { translate : 0;}
+    to { translate : -100%; }
+}
+
+.group {
+    padding-right : 20px;
+    width : auto;
+    /* background-color: aqua; */
+    height : 100%;
+    display : flex;
+    flex-direction : row;
+    gap : 20px;
+    align-items: center;
+    justify-content: center;
+    position : relative;
+    animation : spin 20s infinite linear;
+    overflow-y : visible;
+    /* padding-left : 20px; */
+    margin-left : 20px;
+}
+
+.group:hover{
+    /* animation-play-state : paused; */
+}
+.artwork-container{
+    position : relative;
+    height : 100%;
+    width : auto;
+    border : none;
+    border-radius : 20px;
+    overflow : hidden;
+    padding: 0px;
+    margin : 0px;
+    transition : height 0.25s ease-in-out ;
+    align-self: center;
+    justify-self: center;
+}
+.artwork-container:hover{
+    cursor : pointer;
+    animation : grow 0.5s ease-in-out forwards;
+    height : calc(100% + 50px);
+    position : relative;
+    box-shadow : rgb(162, 255, 255);
+}
+
+.artwork{
+    height : 100%;
+    width : auto;
+}
+
+.onHover{
+    opacity : 0;
+    color : white;
+    align-content : center;
+    position : absolute;
+    top : 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+    background-color : rgba(0, 0, 0, 0.5);
+    animation : fadeIn 0.2s ease-in-out forwards;
+    font-size : 1.5em;
+    font-weight : 600;
+}
