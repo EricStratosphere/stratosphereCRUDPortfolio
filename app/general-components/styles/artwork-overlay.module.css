@@ -41,9 +41,9 @@
 }
 
 .overlay-img{
-    /* width : 80%; */
-    /* width : auto; */
-    /* height : 70%; */
+    width : 80%;
+    width : auto;
+    height : 70%;
     border : 10px solid rgb(255, 255, 255);
 }
 .txt-partition{
@@ -81,4 +81,39 @@
 .instructions{
     font-size : 2em !important;
     color : grey;
+}
+
+@media screen and (max-width : 750px){
+    .overlay{
+        flex-direction : column;
+        /* background-color: blue; */
+        align-items: center;
+        overflow : auto;
+    }
+
+    .img-partition{
+        margin : 0;
+        padding : 0;
+        padding-top : 50px;
+        width : 100%;
+        height : auto;
+        /* background-color: blue; */
+        margin-bottom : 40px;
+    }
+    .txt-partition{
+        padding : 0;
+        width : 100%;
+        height : auto;
+        /* background-color: red; */
+        align-items: start;
+        justify-content: start;
+        margin : 0;
+    }
+    .txt-partition h1{
+        margin : 0;
+
+    }
+    .overlay-img{
+        width : auto;
+    }
 }

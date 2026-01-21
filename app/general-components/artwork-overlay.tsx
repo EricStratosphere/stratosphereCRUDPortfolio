@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 import styles from './styles/artwork-overlay.module.css'
 import Image from 'next/image'
 interface OverlayProps{
@@ -9,11 +9,12 @@ interface OverlayProps{
 }
 
 
-// import { useState, useEffect, CSSProperties} from 'react';
+import { useState, useEffect} from 'react';
 
 export default function ArtworkOverlay({imgUrl, artworkName, artworkDescription, setOverlay} : OverlayProps){
     
     // const [image, setImage] = useState<HTMLImageElement | null>(null);
+    const [width, setWidth] = useState(window.innerWidth);
     console.log("Overlay!");
         const image : HTMLImageElement = new window.Image();
         image.src = imgUrl;
@@ -21,10 +22,20 @@ export default function ArtworkOverlay({imgUrl, artworkName, artworkDescription,
             
         }
     
+    const handleResize = () => {
+        setWidth(window.innerWidth);
+    }
 
-    // useEffect(()=>{
-    //     loadImage();
-    // }, [])
+    useEffect(()=>{
+        
+        window.addEventListener("resize", handleResize);
+
+        return(
+            ()=>{
+                window.removeEventListener("resize", handleResize);
+            }
+        )
+    }, [])
     return(
         <>
             {image ? 
@@ -34,13 +45,35 @@ export default function ArtworkOverlay({imgUrl, artworkName, artworkDescription,
                         <Image src={imgUrl} alt='overlay-img' width={0} height={0} className={styles['overlay-img']}
 
                         style={
-                            image.height > image.width ? 
                             
-                            {width : "auto", minHeight : "250px", height : "60vw", maxHeight : "800px", marginLeft : "20px"}
+                            (
+                                (width > 0 && width <= 750) ?
 
-                            :
+                                (
+                                    (image.height > image.width) ? 
 
-                            {width : "80%", height : "auto"}
+                                    {width : "auto", height : "50vh", maxHeight : "600px"}
+
+                                    :
+
+                                    {width : "80%", height : "auto"}
+                                )
+
+                                :
+
+
+                                (
+                                    (image.height > image.width) ? 
+                            
+                                    {width : "auto", minHeight : "250px", height : "60vw", maxHeight : "800px", marginLeft : "20px"}
+
+                                    :
+
+                                    {width : "80%", height : "auto"}
+                                )
+                            )
+                            
+                            
 
                         }
                         ></Image>
