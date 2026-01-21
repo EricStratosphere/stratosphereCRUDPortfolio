@@ -131,7 +131,7 @@
         padding : 0px;    
         margin : 0px;
         width : 85%;
-        font-size : clamp(20px, 2vw, 25px);
+        font-size : 20px;
     }
 
     .brief-introduction{
@@ -139,9 +139,9 @@
         margin-top : 20px;
         color : rgb(135, 142, 253);;
         font-family : monospace; 
-        font-size : 15px;
+        font-size : 18px;
         width : 100%;
-        font-weight : 800;
+        font-weight : 900;
     }
 
     .about-me{
