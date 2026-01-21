@@ -36,8 +36,8 @@
 
 /* General container styling */
 .service-item {
-    /* background-color: blue; */
     width : 10vw;
+    min-width : 100px;
     height : auto;
 }  
 
@@ -45,10 +45,10 @@
 .service-button{
     width : 10vw;
     height : 10vw;
+    min-width : 120px;
+    min-height : 120px;
     background-color: transparent;
     border : none;
-    /* background : url(/Vector.svg) no-repeat; */
-    /* background-size : cover; */
 }
 
 .service-button:hover{
@@ -62,6 +62,7 @@
     display : flex;
     justify-content: space-around;
     flex-wrap : wrap;
+    min-width : 100px;
     width : 75%;
     gap : 50px;
     text-align : center;

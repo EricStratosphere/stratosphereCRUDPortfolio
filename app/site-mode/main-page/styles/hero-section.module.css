@@ -167,3 +167,59 @@
     justify-content: center;
     align-items: center;
 }
+
+
+@media screen and (max-width : 750px){
+    .hero-section{
+        flex-direction : column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding : 0;
+    }
+
+    .text-area{
+        width : 85%;
+    }
+    .artist-introduction{
+        margin : 0;
+        padding : 0px;
+    }
+
+    .name{
+        background-image : linear-gradient(to top, rgb(255, 121, 32) 0%, rgb(107, 206, 255));
+    }
+    .about-me{
+        padding : 0;
+        margin : 0;
+        margin-top : 30px;
+        background-image : linear-gradient(to top, rgb(255, 255, 255) 40%, rgb(107, 206, 255));
+    }
+    .outer-image-container{
+        margin-top : 50px;
+        margin-bottom : 50px;
+    }
+}
+
+
+@media screen and (max-width : 600px){
+    @keyframes widen{
+        from { width : 0; }
+        to { width : 45%; }
+    }
+    .contact-me{
+        /* background-color: blue; */
+        margin : 0px;
+        margin-top : 40px;
+        flex-direction : column;
+        gap : 40px;
+
+    }
+    .contact-link{
+        /* background-color: aqua; */
+
+    }
+    .about-link{
+        /* background-color: antiquewhite; */
+
+    }
+}
