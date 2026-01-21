@@ -34,7 +34,7 @@
 .underline{
     width : 0;
     height : 2px;
-    animation : widen 0.25s ease-in-out forwards;
+    animation : widen 0.2s ease-in-out forwards;
     background-color: white;
 }
 .service-text{
