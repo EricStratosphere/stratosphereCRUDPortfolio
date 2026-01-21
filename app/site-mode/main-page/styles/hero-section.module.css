@@ -2,7 +2,7 @@
     --outer-padding : 40px;
     --text-margin : 20px 0 0 20px;
 
-    --header-size : clamp(10px, 5vw, 60px);
+    --header-size : clamp(30px, 5vw, 60px);
 }
 
 
@@ -35,6 +35,7 @@
     text-align : left;
     font-family : Italiana;
     font-size : var(--header-size);
+
     -webkit-text-stroke-width : 1px;
     -webkit-text-stroke-color : white;
     
@@ -43,11 +44,9 @@
 
 .contact-me{
     margin : var(--text-margin);
-    /* background-color: blue; */
     width : 100%;
     display : flex;
     gap : 10vw;
-    /* background-color: blue; */
 }
 
 .underline{
@@ -63,8 +62,6 @@
     font-weight : bold;
     color : white;
     padding : 8px 0px 0px 0px;
-    /* border-bottom : 2px solid white; */
-
 }
 
 .about-link::after, .contact-link::after{
