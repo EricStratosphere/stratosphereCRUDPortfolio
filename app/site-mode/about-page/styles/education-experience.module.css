@@ -1,8 +1,19 @@
+@keyframes fadeIn{
+    from {opacity : 0;
+        transform : translateY(-40px);
+    }
+    to{
+        opacity : 1;
+        transform : translateY(0);
+    }
+} 
 .outer-container{
+    opacity : 0;
     display : flex;
     justify-content: center;
     align-items : center;
     margin-bottom : 50px;
+    animation : fadeIn 1s ease-in-out forwards 1s;
 }
 .main-container{
     width : 90%;
