@@ -32,6 +32,16 @@ export default function ServiceSample(){
     const [artworkClicked, setArtworkClicked] = useState(false);
     const [imgUrl, setImgUrl] = useState('');
     const [artworkName, setArtworkName] = useState('');
+
+    const [mouseEntered, setMouseEntered] = useState(false);
+
+    const handleMouseEnter = ()=>{
+        setMouseEntered(true);
+    }
+
+    const handleMouseLeave = ()=>{
+        setMouseEntered(false);
+    }
     function handleArtCardClicked(imgUrl : string, artworkName : string) : void{
         setImgUrl(imgUrl);
         setArtworkName(artworkName);
@@ -43,12 +53,24 @@ export default function ServiceSample(){
                 <ArtworkOverlay imgUrl={imgUrl} artworkName={artworkName} artworkDescription='' setOverlay={setArtworkClicked}></ArtworkOverlay>
             }
             <div className={styles['service-sample-div']}>
-                <div className={styles['service-text']} onClick={()=>{setCarousel(!carousel);}}>
+                <div className={styles['lettering']}>
+                <div className={styles['service-text']} onClick={()=>{setCarousel(!carousel);}}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                    >
                     Works
                 </div>
-                <span className={styles['triangle']} style={!carousel ? {transform : "rotate(90deg)",} : {}}>
+                <div className={styles['triangle']} style={!carousel ? {transform : "rotate(90deg)",} : {}}>
                     ▶
-                </span>
+                </div>
+                </div>
+                {
+                    mouseEntered && 
+                    <div className={styles['underline']}>
+
+                    </div>
+                }
+                
             </div>
             {
                 carousel ? 

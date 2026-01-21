@@ -1,26 +1,52 @@
 @import url('../../main-page/styles/hero-section.module.css');
 .service-sample-div{
     opacity : 0;
-    padding : 40px 40px 0px 40px;
+    padding : 40px 40px 0px 60px;
     height : auto;
     overflow : visible;
     display : flex;
-    /* background-color: blue; */
+    width : fit-content;
+    height : fit-content;
     align-items : center;
     animation : toBottom 1s ease-in-out forwards 1s;
-
+    margin-bottom : 30px;
+    flex-direction: column;
 }
 
+.lettering{
+    display : flex;
+    padding : 0;
+    margin : 0;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+@keyframes widen{
+    from {
+        width : 0%;
+    }
+    to{
+        width : 100%;
+    }
+}
+
+.underline{
+    width : 0;
+    height : 2px;
+    animation : widen 0.25s ease-in-out forwards;
+    background-color: white;
+}
 .service-text{
     /* background-color: aqua; */
-    margin : var(--text-margin);
+    /* margin : var(--text-margin); */
+    align-content : center;
     text-align : left;
     font-family :'Courier New', Courier, monospace;
     font-size : clamp(20px, 2.5vw, 30px);
     -webkit-text-stroke-width : 1px;
     -webkit-text-stroke-color : white;
     letter-spacing: 4px;
-    margin-bottom : 30px;
     /* background-color: aqua; */
 }
 
@@ -28,9 +54,10 @@
     cursor : pointer;
 }
 .triangle{
-    margin-bottom : 10px;
     transition : transform 0.45s ease-in-out;
     margin-left: 10px;
+    align-content: center;
+    height : 100%;
 }
 
 @keyframes fadeIn{
