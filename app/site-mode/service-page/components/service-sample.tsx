@@ -32,7 +32,6 @@ export default function ServiceSample(){
     const [artworkClicked, setArtworkClicked] = useState(false);
     const [imgUrl, setImgUrl] = useState('');
     const [artworkName, setArtworkName] = useState('');
-    const [rotate, setRotate] = useState(false);
     function handleArtCardClicked(imgUrl : string, artworkName : string) : void{
         setImgUrl(imgUrl);
         setArtworkName(artworkName);
