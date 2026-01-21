@@ -97,3 +97,13 @@
 .submit:hover{
     cursor : pointer;
 }
+
+@media screen and (max-width : 750px){
+    .name-area{
+        flex-direction: column;
+    }
+
+    .form-div h2{
+        font-size : 40px;
+    }
+}
