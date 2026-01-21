@@ -40,7 +40,6 @@
     flex-direction : column;
     font-family : monospace;
 }
-
 .education h1, .experience h1{
     /* background-color: blue; */
     margin : 0;
