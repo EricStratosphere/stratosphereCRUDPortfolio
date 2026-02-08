@@ -5,6 +5,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ContactButtons from './contact-buttons'
 export default async function HeroSection(){
+    const url : string = 'https://stratosphere-art-portfolio-backend.vercel.app/api/v1/services';
+    const Response = await fetch(url, {
+        method : "GET", 
+    });
+    if(!Response.ok){
+        
+    }else{
+        
+        console.log();
+    }
     return(
     <>
         <header className={styles['hero-section']}>
