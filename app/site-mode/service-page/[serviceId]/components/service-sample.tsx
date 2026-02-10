@@ -5,7 +5,7 @@ import ServiceArtCard from './service-art-card'
 import { useState } from 'react'; 
 import ArtworkOverlay from '@/app/general-components/artwork-overlay';
 import Carousel from './carousel';
-import ArtCollage from '../../main-page/components/art-collage';
+import ArtCollage from '@/app/site-mode/main-page/components/art-collage';
 
 
 const serviceWorks : {imgUrl : string, artworkName : string}[] = 

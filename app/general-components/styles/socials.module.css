@@ -8,6 +8,10 @@
         transform : translateY(0px);
     }
 }
+.empty-message{
+    color : rgb(119, 119, 119);
+    font-size : 20px;
+}
 .socials-container{
     opacity : 0;
     animation : fadeToBottom 0.5s ease-in forwards 1.75s;  

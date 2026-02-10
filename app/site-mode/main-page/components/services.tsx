@@ -1,11 +1,22 @@
 // "use client";
+"use server";
 import styles from '../styles/services.module.css'
 import Image from 'next/image'
 import ServiceButton from './service-button'
-
-export default function Services(){
-    
-
+import fetchData from '../../methods/methods';
+import { serviceInterface } from '../../interfaces';
+export default async function Services(){
+    var services : any = null;
+    var dataSuccessfullyFetched : boolean = false;
+    const url : string = "https://stratosphere-art-portfolio-backend.vercel.app/api/v1/services";
+    const Response = await fetchData(url);
+    if(!Response.ok){   
+    }else{
+        dataSuccessfullyFetched = true;
+        const response = await Response.json();
+        services = response.data;
+        // console.log(services);
+    }
     return(
         <>
             <div className={styles['services-container']}>
@@ -16,21 +27,14 @@ export default function Services(){
 
                 <div className={styles['services-box']}>
                     
-                    <ServiceButton imgUrl="/Vector(1).svg" serviceTitle='Book Cover Art'></ServiceButton>
-                    <div className={styles['service-item']}>
-                        <button className={styles['service-button']}>
-                            <Image className={styles['service-img']}src='/illustration.png' alt='icon' width={0} height={0}></Image>
-                        </button>
-                        Illustrations
-                    </div>
-
-                    <div className={styles['service-item']}>
-                        <button className={styles['service-button']}>
-                            <Image className={styles['service-img']}src='/vinyl.png' alt='icon' width={0} height={0}></Image>
-                        </button>
-                        Music Cover art
-                    </div>
-                   
+                    {
+                        services.map((value : serviceInterface, index : number)=>{
+                            return (
+                                    <ServiceButton service={value} key={index}></ServiceButton>
+                            )
+                        })
+                    }
+                    {/* <ServiceButton imgUrl="/Vector(1).svg" serviceTitle='Book Cover Art'></ServiceButton> */}
                 </div>
             </div>
         </>

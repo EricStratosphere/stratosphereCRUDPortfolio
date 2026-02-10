@@ -9,6 +9,15 @@
         transform : translateY(0);
     }
 } 
+
+.artwork-div{
+    /* background-color: blue; */
+    display : flex;
+    justify-content: center;
+    padding : 40px;
+    color : rgb(119, 119, 119);
+    font-size : 20px;
+}
 .art-collage{
     opacity : 0;
     padding : 0px 40px 0px 40px;
