@@ -44,11 +44,11 @@ export default async function MainPage(){
                 </div>
                 {
                     status ? 
-                    <ArtCollage artworks={artworks}></ArtCollage>
-                    :
                     <div className={styles['artwork-div']}>
                         {message} 
                     </div>
+                    :
+                    <ArtCollage artworks={artworks}></ArtCollage>
                 }
             </main>
             <footer>

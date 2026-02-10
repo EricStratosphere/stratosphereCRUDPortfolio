@@ -23,3 +23,12 @@ export interface artworkInterface{
         medium : string,
         description : string,
 }
+
+export interface experienceInterface{
+        _id : string,
+        institution : string,
+        program : string,
+        entryType : string,
+        startYear : number,
+        endYear : string | number,
+}
