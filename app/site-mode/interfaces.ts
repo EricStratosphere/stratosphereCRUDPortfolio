@@ -32,3 +32,15 @@ export interface experienceInterface{
         startYear : number,
         endYear : string | number,
 }
+
+export interface ArtCollageProps{
+    artworks : {
+        img_url : string, 
+        name : string,
+        date_created : Date,
+        project_type : string,
+        links : string[],
+        medium : string,
+        description : string,
+        }[],
+}

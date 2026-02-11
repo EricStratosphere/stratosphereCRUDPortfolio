@@ -31,7 +31,7 @@ export default function ArtCard({imgUrl, artworkName, handleArtCardClicked} : Ar
                         {artworkName}
                     </div>
                 }
-                <Image src={imgUrl} alt="artwork" width={0} height={0} className={styles['artwork']}></Image>            
+                <Image src="https://storage.cloud.google.com/stratosphere-art-bucket/Screenshot%202023-08-10%20145052.png" alt="artwork" width={0} height={0} className={styles['artwork']}></Image>            
             </button>
         </>
     );
