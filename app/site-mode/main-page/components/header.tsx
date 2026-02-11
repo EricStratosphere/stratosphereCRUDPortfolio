@@ -45,7 +45,7 @@ export default async function HeroSection(){
 
             <div className={styles['outer-image-container']}>
                 <div className={styles['hero-image-container']}>
-                    <Image className={styles['image']}src="https://storage.googleapis.com/stratosphere-art-bucket/Screenshot_2026-02-10_02_00_52.png" loading="eager" crossOrigin="anonymous" alt="image" width={0} height={0} sizes="100vw"></Image>
+                    <Image className={styles['image']}src="https://storage.googleapis.com/stratosphere-art-bucket/EricStratosphere-mockpic.webp" loading="eager" crossOrigin="anonymous" alt="image" width={0} height={0} sizes="100vw"></Image>
                 </div>
             </div>
         </header>

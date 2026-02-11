@@ -4,7 +4,7 @@ import styles from '../styles/services.module.css'
 import Image from 'next/image'
 import ServiceButton from './service-button'
 import fetchData from '../../methods/methods';
-import { serviceInterface } from '../../interfaces';
+import { serviceInterface } from '../../schema-interfaces';
 export default async function Services(){
     var services : any = null;
     var dataSuccessfullyFetched : boolean = false;

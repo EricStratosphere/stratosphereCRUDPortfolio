@@ -2,7 +2,7 @@
 import styles from '../styles/education-experience.module.css'
 import Credential from './credential'
 import fetchData from '../../methods/methods.ts'
-import { experienceInterface } from '../../interfaces.ts'
+import { experienceInterface } from '../../schema-interfaces.ts'
 export default async function EducationExperience(){
     const url : string = 'https://stratosphere-art-portfolio-backend.vercel.app/api/v1/experiences';
     const Response = await fetchData(url);

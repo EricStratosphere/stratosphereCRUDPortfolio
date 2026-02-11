@@ -17,6 +17,7 @@ export default async function MainPage() {
     response = await Response.json();
     if (Response.ok) {
         artworkArray = response.data;
+        console.log(artworkArray);
     } else {
         message = response.message;
     }

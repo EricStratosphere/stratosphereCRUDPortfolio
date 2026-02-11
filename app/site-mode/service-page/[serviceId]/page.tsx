@@ -3,7 +3,7 @@ import styles from './styles/service-page.module.css'
 import Image from 'next/image'
 import ServiceSample from './components/service-sample';
 import Socials from '@/app/general-components/socials';
-import { servicePageProps } from '../../interfaces.ts';
+import { servicePageProps } from '../../schema-interfaces.ts';
 import fetchData from '../../methods/methods.ts';
 export default async function ServicePage({params} : servicePageProps){
     var response;

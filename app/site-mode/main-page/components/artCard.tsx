@@ -4,12 +4,25 @@ import styles from '../styles/art-collage.module.css'
 import Image from "next/image";
 import ArtworkOverlay from "@/app/general-components/artwork-overlay";
 interface ArtCardProps{
-    imgUrl : string,
+    imgUrl : string, 
     artworkName : string,
-    handleArtCardClicked : (imgUrl : string, artworkName : string) => void,
+    description : string,
+    medium : string,
+    date : Date,
+    links : string[],
+    projectType : string,
+    handleArtCardClicked : (
+        imgUrl : string, 
+        artworkName : string,
+        description : string,
+        medium : string,
+        date : Date,
+        links : string[],
+        projectType : string,
+    ) => void,
 }
 
-export default function ArtCard({imgUrl, artworkName, handleArtCardClicked} : ArtCardProps){
+export default function ArtCard({imgUrl, artworkName, description, medium, date, links, projectType, handleArtCardClicked} : ArtCardProps){
     const [isHovering, setIsHovering] = useState(false);
     // console.log(imgUrl);
 
@@ -25,13 +38,13 @@ export default function ArtCard({imgUrl, artworkName, handleArtCardClicked} : Ar
         <>
 
             <button className={styles['artwork-container']} onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave} onClick={()=>{handleArtCardClicked(imgUrl, artworkName)}}>
+            onMouseLeave={handleMouseLeave} onClick={()=>{handleArtCardClicked(imgUrl, artworkName, description, medium, date, links, projectType)}}>
                 {isHovering && 
                     <div className={styles['onHover']}>
                         {artworkName}
                     </div>
                 }
-                <Image src="https://storage.cloud.google.com/stratosphere-art-bucket/Screenshot%202023-08-10%20145052.png" alt="artwork" width={0} height={0} className={styles['artwork']}></Image>            
+                <Image src={imgUrl} alt="artwork" width={0} height={0} className={styles['artwork']}></Image>            
             </button>
         </>
     );

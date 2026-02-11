@@ -2,7 +2,7 @@
 import styles from '../styles/services.module.css'
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { serviceInterface } from '../../interfaces.ts';
+import { serviceInterface } from '../../schema-interfaces.ts';
 
 interface serviceButtonProps{
     service : serviceInterface
