@@ -2,11 +2,12 @@
 
 import styles from '../styles/service-sample.module.css'
 import ServiceArtCard from './service-art-card'
-import { useState } from 'react'; 
+import { useState, useEffect } from 'react'; 
 import ArtworkOverlay from '@/app/general-components/artwork-overlay';
 import Carousel from './carousel';
 import ArtCollage from '@/app/site-mode/main-page/components/art-collage';
-
+import fetchData from '@/app/site-mode/methods/methods';
+import { artworkInterface } from '@/app/site-mode/schema-interfaces';
 interface ServiceSampleProps{
     id : string
 }
@@ -32,12 +33,19 @@ const artworks : {imgUrl : string, artworkName : string}[] =
 export default function ServiceSample({id} : ServiceSampleProps){
 
     const [carousel, setCarousel] = useState(true);
-    const [artworkClicked, setArtworkClicked] = useState(false);
+    const [overlayMode, setOverlayMode] = useState(false);
     const [imgUrl, setImgUrl] = useState('');
     const [artworkName, setArtworkName] = useState('');
-
+    const [description, setDescription] = useState('');
+    const [medium, setMedium] = useState('');
+    const [date, setDate] = useState(new Date());
+    const [links, setLinks] = useState<string[]>([]);
+    const [projectType, setProjectType] = useState('');
     const [mouseEntered, setMouseEntered] = useState(false);
-
+    const [artworkArray, setArtworkArray] = useState<artworkInterface[]>([]);
+    const [successfulDataFetch, setSuccessfulDataFetch] = useState(false);
+    const url = 'https://stratosphere-art-portfolio-backend.vercel.app/api/v1/serviceartwork/getartworks/' + id;
+    var Response : Response;
     const handleMouseEnter = ()=>{
         setMouseEntered(true);
     }
@@ -45,15 +53,52 @@ export default function ServiceSample({id} : ServiceSampleProps){
     const handleMouseLeave = ()=>{
         setMouseEntered(false);
     }
-    function handleArtCardClicked(imgUrl : string, artworkName : string) : void{
+    function handleArtCardClicked(
+        imgUrl : string, 
+        artworkName : string,
+        description : string,
+        medium : string,
+        date : Date,
+        links : string[],
+        projectType : string,
+
+    ){
         setImgUrl(imgUrl);
         setArtworkName(artworkName);
-        setArtworkClicked(true);
+        setDescription(description);
+        setMedium(medium);
+        setDate(date);
+        setLinks(links);
+        setProjectType(projectType);
+        setOverlayMode(true);
     }
+
+    useEffect(()=> {
+        const getServiceArtworks = async () => {
+            var Response = await fetchData(url);
+            var response = await Response.json();
+            if(!Response.ok){
+            }
+            else{
+                setArtworkArray(response.data);
+            }
+        }
+
+        getServiceArtworks();
+
+        return ()=>{}
+    }, [])
     return(
         <>
-            {artworkClicked && 
-                <ArtworkOverlay imgUrl={imgUrl} artworkName={artworkName} artworkDescription='' setOverlay={setArtworkClicked}></ArtworkOverlay>
+            {overlayMode && 
+                <ArtworkOverlay 
+                imgUrl={imgUrl} 
+                artworkName={artworkName} artworkDescription={description} 
+                medium={medium}
+                date={date}
+                links={links}
+                projectType={projectType}
+                setOverlay={setOverlayMode}/>
             }
             <div className={styles['service-sample-div']}>
                 <div className={styles['lettering']}>
@@ -77,9 +122,9 @@ export default function ServiceSample({id} : ServiceSampleProps){
             </div>
             {
                 carousel ? 
-                <Carousel handleArtCardClicked={handleArtCardClicked} artworks={artworks}></Carousel>
+                <Carousel handleArtCardClicked={handleArtCardClicked} artworks={artworkArray}></Carousel>
                 :
-                <ArtCollage artworks={artworks}></ArtCollage>
+                <ArtCollage artworks={artworkArray}></ArtCollage>
             }
         </> 
     )

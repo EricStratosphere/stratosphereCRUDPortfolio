@@ -4,12 +4,24 @@ import styles from '../styles/service-sample.module.css'
 import { useState } from 'react';
 import Image from "next/image";
 interface ServiceProps{    
-    imgUrl : string,
+    imgUrl : string, 
     artworkName : string,
-    setArtworkClicked : (imgUrl : string, artworkName : string) => void,
+    description : string,
+    medium : string,
+    date : Date,
+    links : string[],
+    projectType : string,
+    setArtworkClicked : (
+        imgUrl : string, 
+        artworkName : string,
+        description : string,
+        medium : string,
+        date : Date,
+        links : string[],
+        projectType : string,) => void,
 }
 
-export default function ServiceArtCard({imgUrl, artworkName, setArtworkClicked} : ServiceProps){
+export default function ServiceArtCard({imgUrl, artworkName, description, medium, date, links, projectType, setArtworkClicked} : ServiceProps){
     const [isHovering, setIsHovering] = useState(false);
     // console.log(imgUrl);
 
@@ -21,7 +33,7 @@ export default function ServiceArtCard({imgUrl, artworkName, setArtworkClicked} 
         setIsHovering(false);
     }
     const handleClick = () => {
-        setArtworkClicked(imgUrl, artworkName);
+        setArtworkClicked(imgUrl, artworkName, description, medium, date, links, projectType);
     }
     return(
         <>
