@@ -1,6 +1,22 @@
 import styles from '../styles/about-header.module.css'
 import Image from 'next/image';
-export default function AboutHeader(){
+import fetchData from '../../methods/methods';
+export default async function AboutHeader(){
+    var brief_introduction;
+    var long_introduction;
+    const url : string = 'https://stratosphere-art-portfolio-backend.vercel.app/api/v1/aboutmepage';
+    const Response = await fetchData(url);
+    if(!Response.ok){
+
+    }
+    else{
+        const response = await Response.json();
+        const data = response.data;
+        console.log(data);
+        brief_introduction = data.brief_introduction;
+        long_introduction = data.long_introduction;
+    }
+
     return(
         <>
             <header className={styles['header']}>
@@ -11,11 +27,11 @@ export default function AboutHeader(){
                     
                 </span>
                 <span className={styles['brief-introduction']}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem totam consequuntur amet, distinctio necessitatibus voluptatum suscipit laudantium reiciendis officiis consequatur ducimus magni aspernatur veritatis fugiat unde dolore similique fuga quaerat!
+                    {brief_introduction}
                     </span>
                 <div className={styles['about-me']}>
                     
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sed tempore temporibus aliquam a, id totam vero exercitationem modi cupiditate, obcaecati error minus dolorum labore possimus dolor ad similique quod!
+                   {long_introduction}
                 </div>
             </div>
 

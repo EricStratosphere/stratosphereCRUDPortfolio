@@ -10,7 +10,6 @@ export default function Home() {
   useEffect(()=>{push('./site-mode/main-page')},[])
   return (
    <>
-    
    </>
   );
 }

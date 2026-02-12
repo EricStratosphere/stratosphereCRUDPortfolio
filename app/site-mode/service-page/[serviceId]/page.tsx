@@ -3,21 +3,41 @@ import styles from './styles/service-page.module.css'
 import Image from 'next/image'
 import ServiceSample from './components/service-sample';
 import Socials from '@/app/general-components/socials';
-export default async function ServicePage(){
+import { servicePageProps } from '../../schema-interfaces.ts';
+import fetchData from '../../methods/methods.ts';
+export default async function ServicePage({params} : servicePageProps){
+    var response;
+    var service;
+    var subservices : string = "";
+    const { serviceId } = await params;
+    const serviceurl : string = 'https://stratosphere-art-portfolio-backend.vercel.app/api/v1/services/' + serviceId
+    const Response = await fetchData(serviceurl);
+    if(!Response.ok){
+    
+    }
+    else{
+        response = await Response.json();
+        service = response.data;
+        subservices = service.subservices[0];
+        for(let i = 1; i < service.subservices.length; i++){
+            subservices += " | " + service.subservices[i];
+        }
+    }
+
     return(
         <>
             <header className={styles['service-header']}>
                 <div className={styles['text-area']}>
                     <span className={styles['service-title']}>
-                        
-                       Book Cover Design
+
+                        {service.service_name}
                         
                     </span>
                     <span className={styles['sub-services']}>
-                        Composition layout | Graphic Design | Font Design | Environmental design
+                        {subservices}
                     </span>
                     <div className={styles['service-description']}>
-                        From fantasy to non-fiction, if you are looking for a visual artist to design your books, I have the experience in composition and color theory to produce designs that provide easy navigation for the eyes and attract readers!
+                        {service.service_description}
                     </div>
                 </div>
 
@@ -29,7 +49,7 @@ export default async function ServicePage(){
             </header>
 
             <main>
-                <ServiceSample></ServiceSample>
+                <ServiceSample id={service._id}></ServiceSample>
             </main>
             <footer>
                 <Socials></Socials>

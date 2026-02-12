@@ -1,20 +1,29 @@
 "use client";
 import styles from './styles/artwork-overlay.module.css'
 import Image from 'next/image'
+import Link from 'next/link';
+import { format } from 'path';
 interface OverlayProps{
     imgUrl : string,
     artworkName : string,
     artworkDescription : string,
+    medium : string,
+    date : Date,
+    links : string[],
+    projectType : string,
     setOverlay : (value : boolean)=>void,
 }
 
 
 import { useState, useEffect} from 'react';
 
-export default function ArtworkOverlay({imgUrl, artworkName, artworkDescription, setOverlay} : OverlayProps){
+export default function ArtworkOverlay({imgUrl, artworkName, artworkDescription, 
+    medium, date, links, projectType,
+    setOverlay} : OverlayProps){
     
     // const [image, setImage] = useState<HTMLImageElement | null>(null);
     const [width, setWidth] = useState(window.innerWidth);
+    const [formattedDate, setFormattedDate] = useState('');
     console.log("Overlay!");
         const image : HTMLImageElement = new window.Image();
         image.src = imgUrl;
@@ -35,6 +44,19 @@ export default function ArtworkOverlay({imgUrl, artworkName, artworkDescription,
                 window.removeEventListener("resize", handleResize);
             }
         )
+    }, [])
+    useEffect(()=>{
+        const months = [
+            "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+        ]
+
+        const fixedDate = new Date(date);
+        const monthName = months[fixedDate.getMonth()];
+        const day = fixedDate.getDate();
+        const year = fixedDate.getFullYear();
+
+        setFormattedDate(`${monthName} ${day}, ${year}`);
     }, [])
     return(
         <>
@@ -84,17 +106,38 @@ export default function ArtworkOverlay({imgUrl, artworkName, artworkDescription,
                         </h1>
                                 
                         <p>
-                            Date | March 18, 2025
+                            Date | {formattedDate}
                             <br/>
-                            Medium | Digital art on IbisPaintX
+                            Medium | {medium}
                             <br/>
-                            Project Type | Personal Project
+                            Project Type | {projectType}
                             <br/>
 
                         </p>
                         <h3>
-                            A fanart I created of my first and favorite Ghibli film. Howl&apos;s Moving Castle will always have a special place in my heart.
+                            {artworkDescription}
                         </h3>
+
+                        {
+                        
+                        links.length > 0 ? 
+                        <p>
+                            Affiliated links:
+                            <br />
+                        {
+                        links.map((value, index)=>{
+                            return (
+                                <Link style={{color : 'white'}}key={index} href={value}>{value}</Link>
+                                
+                            )
+                        })
+                        }
+                        </p>
+                        : 
+                        
+                        null 
+
+                        }
 
                         <p className={styles['instructions']}>Click anywhere to close.</p>
                     </div>
