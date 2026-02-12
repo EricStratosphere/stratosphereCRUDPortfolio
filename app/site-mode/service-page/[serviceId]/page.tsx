@@ -43,7 +43,7 @@ export default async function ServicePage({params} : servicePageProps){
 
                 <div className={styles['outer-image-container']}>
                     <div className={styles['hero-image-container']}>
-                        <Image className={styles['image']}src="/book.png" alt="image" width={0} height={0} sizes="100vw"></Image>
+                        <Image className={styles['image']}src={service.service_img_link} alt="image" width={0} height={0} sizes="100vw"></Image>
                     </div>
                 </div>
             </header>
