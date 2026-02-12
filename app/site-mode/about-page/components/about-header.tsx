@@ -37,7 +37,7 @@ export default async function AboutHeader(){
 
             <div className={styles['outer-image-container']}>
                 <div className={styles['hero-image-container']}>
-                    <Image className={styles['image']}src="/EricStratosphere-mockpic.webp" alt="image" width={0} height={0} sizes="100vw"></Image>
+                    <Image className={styles['image']}src="https://storage.googleapis.com/stratosphere-art-bucket/EricStratosphere-mockpic.webp" alt="image" width={0} height={0} sizes="100vw"></Image>
                 </div>
             </div>
             </header>   
