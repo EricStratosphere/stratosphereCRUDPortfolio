@@ -40,7 +40,12 @@ export default function ArtCollage({artworks} : ArtCollageProps){
     return(
         <>
             {overlayMode && 
-                <ArtworkOverlay imgUrl={imgUrl} artworkName={artworkName} artworkDescription="" setOverlay={setOverlayMode}/>
+                <ArtworkOverlay imgUrl={imgUrl} artworkName={artworkName} artworkDescription={description} 
+                medium={medium}
+                date={date}
+                links={links}
+                projectType={projectType}
+                setOverlay={setOverlayMode}/>
             }
             <div className={styles['art-collage']}>                
                 <div className={styles['artworks']}>
