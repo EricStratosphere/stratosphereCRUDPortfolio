@@ -1,6 +1,7 @@
 "use client";
 import styles from './styles/artwork-overlay.module.css'
 import Image from 'next/image'
+import Link from 'next/link';
 import { format } from 'path';
 interface OverlayProps{
     imgUrl : string,
@@ -120,18 +121,18 @@ export default function ArtworkOverlay({imgUrl, artworkName, artworkDescription,
                         {
                         
                         links.length > 0 ? 
-                        <h3>
+                        <p>
                             Affiliated links:
                             <br />
                         {
                         links.map((value, index)=>{
                             return (
-                                <a key={index} href={value}>Link {index + 1}</a>
+                                <Link style={{color : 'white'}}key={index} href={value}>{value}</Link>
                                 
                             )
                         })
                         }
-                        </h3>
+                        </p>
                         : 
                         
                         null 
