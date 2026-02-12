@@ -3,9 +3,9 @@ import styles from './styles/socials.module.css'
 import Link from 'next/link';
 import Image from 'next/image';
 import fetchData from '../site-mode/methods/methods';
-
+import { socialSchema } from '../site-mode/schema-interfaces';
 export default async function Socials(){
-    var socialsArray;
+    var socialsArray : socialSchema[] | null = null;
     var isEmpty = false;
     const socials : {iconUrl : string, href : string, socialTitle : string}[] = [
         {
@@ -33,7 +33,7 @@ export default async function Socials(){
     else{
         const response = await Response.json();
         socialsArray = response.data;
-        isEmpty = socialsArray.length === 0;
+        isEmpty = socialsArray?.length === 0;
     }
     return(
         <>
@@ -53,12 +53,12 @@ export default async function Socials(){
 
                     :
 
-                    socialsArray.map
+                    socialsArray?.map
                         (
                             (value, index : number) => 
-                                <Link key={index} className={styles['social-link']} href={value.href}>
-                                    <Image height={0} width={0} className={styles['social-icon']} src={value.iconUrl} alt="Social Icon"/>
-                                    {value.socialTitle}
+                                <Link key={index} className={styles['social-link']} href={value.social_link}>
+                                    <Image height={0} width={0} className={styles['social-icon']} src={value.icon_url} alt="Social Icon"/>
+                                    {value.social_name}
                                 </Link>
                         )
                     }
