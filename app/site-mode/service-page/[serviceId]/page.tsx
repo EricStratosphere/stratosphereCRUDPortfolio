@@ -10,8 +10,8 @@ export default async function ServicePage({params} : servicePageProps){
     var service;
     var subservices : string = "";
     const { serviceId } = await params;
-    const url : string = 'https://stratosphere-art-portfolio-backend.vercel.app/api/v1/services/' + serviceId
-    const Response = await fetchData(url);
+    const serviceurl : string = 'https://stratosphere-art-portfolio-backend.vercel.app/api/v1/services/' + serviceId
+    const Response = await fetchData(serviceurl);
     if(!Response.ok){
     
     }
@@ -23,6 +23,7 @@ export default async function ServicePage({params} : servicePageProps){
             subservices += " | " + service.subservices[i];
         }
     }
+
     return(
         <>
             <header className={styles['service-header']}>
@@ -48,7 +49,7 @@ export default async function ServicePage({params} : servicePageProps){
             </header>
 
             <main>
-                <ServiceSample></ServiceSample>
+                <ServiceSample id={service._id}></ServiceSample>
             </main>
             <footer>
                 <Socials></Socials>

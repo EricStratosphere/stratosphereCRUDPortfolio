@@ -7,6 +7,9 @@ import ArtworkOverlay from '@/app/general-components/artwork-overlay';
 import Carousel from './carousel';
 import ArtCollage from '@/app/site-mode/main-page/components/art-collage';
 
+interface ServiceSampleProps{
+    id : string
+}
 
 const serviceWorks : {imgUrl : string, artworkName : string}[] = 
 [
@@ -26,7 +29,7 @@ const artworks : {imgUrl : string, artworkName : string}[] =
     {imgUrl : '/songOfAchilles.png', artworkName : 'Achilles smiled as his face strikes the Earth'},   
 ]
 
-export default function ServiceSample(){
+export default function ServiceSample({id} : ServiceSampleProps){
 
     const [carousel, setCarousel] = useState(true);
     const [artworkClicked, setArtworkClicked] = useState(false);
@@ -74,9 +77,9 @@ export default function ServiceSample(){
             </div>
             {
                 carousel ? 
-                <Carousel handleArtCardClicked={handleArtCardClicked} artworks={serviceWorks}></Carousel>
+                <Carousel handleArtCardClicked={handleArtCardClicked} artworks={artworks}></Carousel>
                 :
-                <ArtCollage artworks={serviceWorks}></ArtCollage>
+                <ArtCollage artworks={artworks}></ArtCollage>
             }
         </> 
     )
