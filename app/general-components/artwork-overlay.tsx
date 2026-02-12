@@ -117,6 +117,27 @@ export default function ArtworkOverlay({imgUrl, artworkName, artworkDescription,
                             {artworkDescription}
                         </h3>
 
+                        {
+                        
+                        links.length > 0 ? 
+                        <h3>
+                            Affiliated links:
+                            <br />
+                        {
+                        links.map((value, index)=>{
+                            return (
+                                <a key={index} href={value}>Link {index + 1}</a>
+                                
+                            )
+                        })
+                        }
+                        </h3>
+                        : 
+                        
+                        null 
+
+                        }
+
                         <p className={styles['instructions']}>Click anywhere to close.</p>
                     </div>
             </div>
