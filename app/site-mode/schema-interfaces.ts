@@ -44,3 +44,9 @@ export interface ArtCollageProps{
         description : string,
         }[],
 }
+
+export interface socialSchema{
+        icon_url : string,
+        social_name : string,
+        social_link : string,
+}

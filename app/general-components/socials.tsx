@@ -23,7 +23,8 @@ export default async function Socials(){
             href : "https://www.upwork.com/freelancers/~016d80d833a67e919a",
             socialTitle : "Upwork",
         },
-    ] 
+    ]
+
     const url = "https://stratosphere-art-portfolio-backend.vercel.app/api/v1/socials";
     const Response = await fetchData(url);
     if(!Response.ok){
@@ -52,9 +53,9 @@ export default async function Socials(){
 
                     :
 
-                    socials.map
+                    socialsArray.map
                         (
-                            (value, index) => 
+                            (value, index : number) => 
                                 <Link key={index} className={styles['social-link']} href={value.href}>
                                     <Image height={0} width={0} className={styles['social-icon']} src={value.iconUrl} alt="Social Icon"/>
                                     {value.socialTitle}
